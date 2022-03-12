@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Image from 'next/image'
+import Header from './header'
 const HomeStyle = styled.div`
   font-size: 50px;
   min-height: 100vh;
@@ -8,11 +9,6 @@ const HomeStyle = styled.div`
   /* background-image: url("bg_blob.png"); */
   display:  flex;
   flex-direction: column ;
-`
-
-const Header = styled.div`
-    height: 140px;
-    background-color: blue;
 `
 
 const HeroStyle = styled.div`
@@ -30,13 +26,13 @@ const HeroText = styled.div`
 // TODO: Make the image come out fine
 export default function Home() {
     return ( <HomeStyle>
-                <Header>Yolo</Header>
+                <Header />
                 <HeroStyle>
                 <div> div 1</div>
                 <div> div 2</div>
                 <div> div 3</div>
                 </HeroStyle>
-                <Image src="/bg_blob.png" height="900px" width="1441px" layout="intrinsic"/>
+                {/* <Image src="/bg_blob.png" height="900px" width="1441px" layout="responsive"/> */}
 
             </HomeStyle>);
 }
