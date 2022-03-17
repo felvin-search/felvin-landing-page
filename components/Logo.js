@@ -30,6 +30,7 @@ const Text = ({ className }) => {
   // This logo is in Poppins font
   return (
     <svg
+      className={className}
       width="145"
       height="45"
       viewBox="0 0 87 27"
