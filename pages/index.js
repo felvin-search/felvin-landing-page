@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import Home from "../components/home"
+import FeaturesPage from '../components/featuresPage'
 
 const Title = styled.h1`
   font-size: 50px;
@@ -22,7 +23,7 @@ const Tab = styled.div`
 export default function App() {
   return <div>
   <Home />
-  <Tab>Tab1</Tab>
+  <FeaturesPage />
   <Tab>Tab2</Tab>
   <Tab>Tab2</Tab>
 

@@ -1,6 +1,7 @@
 import styled from 'styled-components'
 import Logo from './Logo'
 import Header from './header'
+import HeroArea from './heroArea'
 const HomeStyle = styled.div`
   /* font-size: 50px; */
   min-height: 100vh;
@@ -113,6 +114,5 @@ export default function Home() {
                   </SearchForm>
                 </HeroStyle>
                 {/* <Image src="/bg_blob.png" height="900px" width="1441px" layout="responsive"/> */}
-
             </HomeStyle>);
 }
