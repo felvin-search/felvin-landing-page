@@ -5,7 +5,7 @@ const HomeStyle = styled.div`
   /* font-size: 50px; */
   min-height: 100vh;
   /* background-color: yellow; */
-  background: radial-gradient(136.27% 42.1% at 100%, #00E771 0%, #FFD542 28.13%, #F1B1CD 64.06%, #FF002E 100%);
+  background: radial-gradient(200.18% 300.33% at 0% -48.51%, #2CD687 0%, #FFE178 30.73%, #FFBFDB 58.85%, #FC4B6B 100%);
   /* background-image: url("bg_blob.png"); */
   display:  flex;
   flex-direction: column ;
