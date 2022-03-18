@@ -8,6 +8,7 @@ const GlobalStyle = createGlobalStyle`
 
   *, *::after, *::before {
     box-sizing: border-box;
+    font-family: monospace;
   }
 `
 
