@@ -21,7 +21,6 @@ const Icon = styled.svg`
 `;
 
 const HeaderText = styled.div`
-font-family: 'Inconsolata';
 /* font-style: normal; */
 /* font-weight: 700; */
 font-size: 20px;
@@ -72,8 +71,8 @@ const Comp1 = () => {
 const Comp2 = () => {
     return (
         <CompStyle>
-            <Icon as={Icons.GitHub} />
-            <HeaderText>Github</HeaderText>
+            <Icon as={Icons.Discord} />
+            <HeaderText>Discord</HeaderText>
         </CompStyle>
     )
 }
@@ -83,8 +82,8 @@ const Comp2 = () => {
 const Comp3 = () => {
     return (
         <CompStyle>
-            <Icon as={Icons.Discord} />
-            <HeaderText>Discord</HeaderText>
+            <Icon as={Icons.GitHub} />
+            <HeaderText>Fork</HeaderText>
         </CompStyle>
     )
 }
@@ -96,7 +95,6 @@ border-radius: 50px;
 justify-content:center ; */
 margin: 10px;
 padding: 1rem;
-font-family: 'Inconsolata';
 font-size: 1rem;
 white-space: nowrap;
 /* font-weight: 700;

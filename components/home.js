@@ -20,7 +20,6 @@ const HeroStyle = styled.div`
   justify-content: center ;
   flex: 1 0 auto;
   z-index: 2;
-  font-family: monospace;
 `
 
 const HeroText = styled.div`
