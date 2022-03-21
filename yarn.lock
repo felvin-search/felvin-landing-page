@@ -203,6 +203,18 @@
   resolved "https://registry.yarnpkg.com/@next/swc-win32-x64-msvc/-/swc-win32-x64-msvc-12.1.0.tgz#d27e7e76c87a460a4da99c5bfdb1618dcd6cd064"
   integrity sha512-aBvcbMwuanDH4EMrL2TthNJy+4nP59Bimn8egqv6GHMVj0a44cU6Au4PjOhLNqEh9l+IpRGBqMTzec94UdC5xg==
 
+"@splinetool/react-spline@^2.0.0":
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/@splinetool/react-spline/-/react-spline-2.0.0.tgz#6ac56de3030ec4166d8f65588e6f82f505e05439"
+  integrity sha512-lfB18x1/o75v81Sw6aGP2x0amFb7iYN/J06aJ7k5tit8IfGQ2a+QFO18Bd3g/RjvBLQqRJhh8KTVwFGqTSIxqQ==
+
+"@splinetool/runtime@^0.9.17":
+  version "0.9.17"
+  resolved "https://registry.yarnpkg.com/@splinetool/runtime/-/runtime-0.9.17.tgz#784cc14d91e56960a01cd191dd7bc7ffaec57d38"
+  integrity sha512-Jn5YHeVYLDyW9xqGYd81be0oISM9cB52kquOdo8nl450hsJrQU5j/nPqBfftzmdInc0vwNPXKUPS2/wi0hy5Ww==
+  dependencies:
+    on-change "^4.0.0"
+
 ansi-styles@^3.2.1:
   version "3.2.1"
   resolved "https://registry.yarnpkg.com/ansi-styles/-/ansi-styles-3.2.1.tgz#41fbb20243e50b12be0f04b8dedbf07520ce841d"
@@ -359,6 +371,11 @@ object-assign@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/object-assign/-/object-assign-4.1.1.tgz#2109adc7965887cfc05cbbd442cac8bfbb360863"
   integrity sha1-IQmtx5ZYh8/AXLvUQsrIv7s2CGM=
+
+on-change@^4.0.0:
+  version "4.0.0"
+  resolved "https://registry.yarnpkg.com/on-change/-/on-change-4.0.0.tgz#26570babb7170f28be5ea0ba00a284a5a343a472"
+  integrity sha512-PTu7C9Jsz4b+sNMDpH0eZFTr7uxdOtoDWRnhaVNK50bgrrnW5nvbWI0jm5DG9qOoTnIhBzE9xoKVFPD9xgtbdg==
 
 picocolors@^1.0.0:
   version "1.0.0"

@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import Logo from './Logo'
 import Header from './header'
 import HeroArea from './heroArea'
+import dynamic from 'next/dynamic';
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
 const HomeStyle = styled.div`
   /* font-size: 50px; */
   min-height: 100vh;
@@ -20,6 +24,11 @@ const HeroStyle = styled.div`
   justify-content: center ;
   flex: 1 0 auto;
   z-index: 2;
+`
+
+const BackgroundSpline = styled(Spline)`
+  z-index: -1;
+  position: absolute;
 `
 
 const HeroText = styled.div`
@@ -60,14 +69,14 @@ const SearchForm = styled.form`
 
 const SearchBox = styled.input`
   padding: 1.5rem;
-  padding-right: 48px;
+  padding-right: 55px;
   font-size: 1rem;
   border-radius: 50px;
   width: clamp(45vw, 350px, 90vw);
-  margin: 2.5rem;
+  margin: 2.5rem 0;
   @media (max-width: 450px) {
     padding: 1rem;
-    padding-right: 48px;
+    padding-right: 55px;
   }
 `
 
@@ -77,13 +86,13 @@ const SearchButton = styled.button`
   margin: 0;
   cursor: pointer;
   position: absolute;
-  right: 3.2rem;
-  top: 3.7rem;
+  right: 1rem;
+  top: 3.6rem;
   opacity: 0.3;
   transition: opacity 200ms ease-in-out;
   @media (max-width: 450px) {
     top: 3.1rem;
-    right: 3rem
+    right: 0.8rem;
   }
   &:hover {
     opacity: 0.5;
@@ -100,6 +109,7 @@ export default function Home() {
     return ( <HomeStyle>
                 <Header />
                 <HeroStyle>
+                  <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/>
                   <HeroText>
                     <HeroTextTransparent>search less,</HeroTextTransparent>
                     <HeroTextSolid>do more</HeroTextSolid>
@@ -112,6 +122,5 @@ export default function Home() {
                     </SearchButton>                    
                   </SearchForm>
                 </HeroStyle>
-                {/* <Image src="/bg_blob.png" height="900px" width="1441px" layout="responsive"/> */}
             </HomeStyle>);
 }
