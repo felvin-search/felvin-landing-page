@@ -10,6 +10,34 @@ const UseCasesPageStyles = styled.div`
   align-items: center;
   justify-content: flex-end;
   gap: 1rem;
+  position: relative;
+  overflow-x: hidden;
+  &:before {
+      content: '';
+      position: absolute;
+      width: 220px;
+      height: 500px;
+      left: 70%;
+      top: 30%;
+      background: #FFD542;
+      mix-blend-mode: normal;
+      opacity: 0.30;
+      filter: blur(45px);
+      transform: rotate(18deg);
+  }
+  &:after {
+      content: '';
+      position: absolute;
+      width: 220px;
+      height: 500px;
+      left: 70%;
+      top: 30%;
+      background: pink;
+      mix-blend-mode: normal;
+      opacity: 0.30;
+      filter: blur(45px);
+      transform: rotate(32deg);
+  }
 `
 
 const Heading = styled.h2`
@@ -49,6 +77,7 @@ const CodeUseCaseExample = styled.div`
     padding: 3rem;
     margin: 1rem;
     width: 90%;
+    z-index: 1;
 `
 
 const CodeSearchBox = styled.div`
@@ -119,6 +148,35 @@ export function merge (list1, list2) {
    return merge(mergeSort(subList1), mergeSort(subList2))
  }`
 
+const FancyTextArea = styled.div`
+    height: 40vh;
+    position: relative;
+`
+
+const FancyText = styled.div`
+    position: absolute;
+    transform: translateX(-50%);
+    background: radial-gradient(#FFD542, #1A1A1A 70%);
+    -webkit-text-stroke: 1px transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: #1A1A1A;
+    font-size: 10rem;
+    height: 10rem;
+`
+
+const FancyText1 = styled(FancyText)`
+    top: 40%;
+`
+
+const FancyText2 = styled(FancyText)`
+    top: 50%;
+`
+
+const FancyText3 = styled(FancyText)`
+    top: 60%;
+`
+
 const Subheading = styled.h3`
     color: #D9D9D9;
     font-size: 1.8rem;
@@ -188,6 +246,11 @@ export default function UseCasesPage() {
                     {CodeSnippet}
                 </MySyntaxHighlighter>
             </CodeUseCaseExample>
+            <FancyTextArea>
+                <FancyText1>more</FancyText1>
+                <FancyText2>more</FancyText2>
+                <FancyText3>more</FancyText3>
+            </FancyTextArea>
             <Subheading>See more potential use cases for Felvin</Subheading>
             <ExternalLinkArea>
                 <ExternalLinkPill>Fork On Git</ExternalLinkPill>
