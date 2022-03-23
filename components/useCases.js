@@ -15,28 +15,28 @@ const UseCasesPageStyles = styled.div`
   &:before {
       content: '';
       position: absolute;
-      width: 220px;
-      height: 500px;
-      left: 70%;
-      top: 30%;
+      width: 200px;
+      height: 80vh;
+      left: 65%;
+      top: 15%;
       background: #FFD542;
       mix-blend-mode: normal;
       opacity: 0.30;
-      filter: blur(45px);
-      transform: rotate(18deg);
+      filter: blur(50px);
+      transform: rotate(28deg);
   }
   &:after {
       content: '';
       position: absolute;
-      width: 220px;
-      height: 500px;
-      left: 70%;
-      top: 30%;
+      width: 200px;
+      height: 80vh;
+      left: 65%;
+      top: 15%;
       background: pink;
       mix-blend-mode: normal;
-      opacity: 0.30;
-      filter: blur(45px);
-      transform: rotate(32deg);
+      opacity: 0.25;
+      filter: blur(50px);
+      transform: rotate(42deg);
   }
 `
 
@@ -68,13 +68,13 @@ const MainUseCase = styled.span`
 `
 
 const CodeUseCaseExample = styled.div`
-    background: #0F0F0F;
+    background: rgba(0,0,0,0.9);
     flex-grow: 1;
     border-radius: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 3rem;
+    padding: 2rem;
     margin: 1rem;
     width: 90%;
     z-index: 1;
@@ -85,6 +85,8 @@ const CodeSearchBox = styled.div`
     border-radius: 60px;
     display: flex;
     flex-direction: row;
+    align-self: center;
+    gap: 1rem;
     justify-content: space-around;
     color: white;
     padding: 2rem;
@@ -179,7 +181,7 @@ const FancyText3 = styled(FancyText)`
 
 const Subheading = styled.h3`
     color: #D9D9D9;
-    font-size: 1.8rem;
+    font-size: 2.5rem;
     margin: 1rem;
     text-align: center;
 `
@@ -198,17 +200,23 @@ const UseCaseArea = styled.div`
     justify-content: center;
     align-items: center;
     margin: 1rem;
+    margin-bottom: 3rem;
+    gap: 0.8rem;
 `
 
 const Pill = styled.div`
     border-radius: 50px;
     padding: 0.6rem 1.2rem;
+    font-size: 1.2rem;
 `
 
 const ExternalLinkPill = styled(Pill)`
     text-transform: uppercase;
-    border: 2px solid #FC4B6B;
+    border: 1px solid #FC4B6B;
     color: white;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
 `
 
 const MainUseCaseRow = styled(ExternalLinkArea)`
@@ -216,7 +224,7 @@ const MainUseCaseRow = styled(ExternalLinkArea)`
 `
 
 const UseCaseRow = styled(ExternalLinkArea)`
-    gap: 0.5rem;
+    gap: 1rem;
 `
 
 const UseCasePill = styled(Pill)`
@@ -236,7 +244,7 @@ export default function UseCasesPage() {
                 <MainUseCase highlighted >Code</MainUseCase>
             </MainUseCaseRow>
             <CodeUseCaseExample>
-                <CodeSearchBox>merge sort in javascript</CodeSearchBox>
+                <CodeSearchBox><img src="/search_icon.svg" /> merge sort in javascript</CodeSearchBox>
                 <MySyntaxHighlighter 
                     language="javascript"
                     style={a11yDark}
@@ -253,9 +261,9 @@ export default function UseCasesPage() {
             </FancyTextArea>
             <Subheading>See more potential use cases for Felvin</Subheading>
             <ExternalLinkArea>
-                <ExternalLinkPill>Fork On Git</ExternalLinkPill>
-                <ExternalLinkPill>Try the Beta</ExternalLinkPill>
-                <ExternalLinkPill>Submit Ideas</ExternalLinkPill>
+                <ExternalLinkPill><img src="/github_white.svg" /> Fork On Git</ExternalLinkPill>
+                <ExternalLinkPill><img src="/cloud_down.svg" /> Try the Beta</ExternalLinkPill>
+                <ExternalLinkPill><img src="/diagonal_arrow.svg" /> Submit Ideas</ExternalLinkPill>
             </ExternalLinkArea>
             <UseCaseArea>
                 <UseCaseRow>
