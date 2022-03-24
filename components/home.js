@@ -33,6 +33,7 @@ const BackgroundSpline = styled(Spline)`
 
 const HeroText = styled.div`
   font-size: 3rem;
+  color: #232323;
   @media (max-width: 650px) {
     font-size: 2rem;
   }
@@ -45,7 +46,7 @@ const HeroText = styled.div`
 `
 
 const HeroTextSolid = styled.h1`
-  -webkit-text-stroke: 1px black;
+  -webkit-text-stroke: 1px #232323;
   margin: 0rem;
   `
 
@@ -61,6 +62,8 @@ const Tagline = styled.h2`
   font-size: 1rem;
   max-width: 300px;
   margin: 0;
+  color: #232323;
+  line-height: 1.5rem;
 `
 
 const SearchForm = styled.form`
@@ -95,7 +98,7 @@ const SearchButton = styled.button`
     right: 0.8rem;
   }
   &:hover {
-    opacity: 0.5;
+    opacity: 0.6;
   }
 `
 

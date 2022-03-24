@@ -1,14 +1,24 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
 
 const GlobalStyle = createGlobalStyle`
+  @font-face {
+    font-family: "F37 Jan Bold";
+    src: url("/fonts/F37 Jan/F37 Jan/F37JanTest-Bold.otf");
+  }
+  @font-face {
+    font-family: "F37 Jan Regular";
+    src: url("/fonts/F37 Jan/F37 Jan/F37JanTest-Regular.otf");
+  }
+
   body {
     margin: 0;
     padding: 0;
+    font-family: "F37 Jan Bold";
   }
 
   *, *::after, *::before {
     box-sizing: border-box;
-    font-family: monospace;
+    font-family: inherit;
   }
 `
 

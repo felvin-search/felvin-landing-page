@@ -32,28 +32,28 @@ const FeaturesHeading = styled.span`
 const FeaturesAreaStyles = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-evenly;
   align-items: center;
-  gap: 5vw;
   padding: 5vw 0;
-  @media (max-width: 900px) {
-      gap: 2vw;
-  }
+  width: 100%;
   @media (max-width: 650px) {
     flex-direction: column;
+    gap: 1rem;
   }
 `;
 
 const FeatureBox = styled.div`
-    border-radius: 5rem;
-    width: 25vw;
+    border-radius: 50px;
+    width: clamp(200px, 28vw, 400px);
     height: 50vh;
     background-image: radial-gradient(farthest-corner at 75px 100px, hsla(326, 100%, 80%, 1) 0%, hsla(326, 100%, 80%, 1) 20%, hsla(55, 100%, 80%, 1) 100%);
     @media (max-width: 900px) {
-      width: 30vw;
+    width: clamp(200px, 30vw, 400px);
+      height: 55vh;
     }
     @media (max-width: 650px) {
       width: clamp(200px, 400px, 80vw);
+      height: 50vh;
     }
 `;
 
@@ -73,6 +73,15 @@ const FeatureDescription = styled.div`
   margin: 1rem;
 `
 
+const FeatureDescriptionBody = styled.p`
+  margin: 0.5rem;
+  font-family: "F37 Jan Regular";
+`
+
+const FeatureDescriptionHead = styled.h2`
+  margin: 0.5rem 0.5rem 0;
+`
+
 export default function FeaturesPage() {
     return (
     <FeaturesPageStyles>
@@ -81,22 +90,22 @@ export default function FeaturesPage() {
           <FeatureBox>
             <EmptyHalf />
             <FeatureDescription>
-              <h2>Open Source</h2>
-              <p>Be it finding code, comparing cars or find your next favourite holiday destination, with Felvin you won’t have to go anywhere else.</p>
+              <FeatureDescriptionHead>Open Source</FeatureDescriptionHead>
+              <FeatureDescriptionBody>Be it finding code, comparing cars or find your next favourite holiday destination, with Felvin you won’t have to go anywhere else.</FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox>
           <FeatureBox2>
             <EmptyHalf />
             <FeatureDescription>
-              <h2>Community Driven</h2>
-              <p>Open source repo here and the community knows the best and can drive the best result.</p>
+              <FeatureDescriptionHead>Community Driven</FeatureDescriptionHead>
+              <FeatureDescriptionBody>Open source repo here and the community knows the best and can drive the best result.</FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox2>
           <FeatureBox3>
             <EmptyHalf />
             <FeatureDescription>
-              <h2>Truly Extensible</h2>
-              <p>Wished you could improve your search experience? Now we give this power to you.</p>
+              <FeatureDescriptionHead>Truly Extensible</FeatureDescriptionHead>
+              <FeatureDescriptionBody>Wished you could improve your search experience? Now we give this power to you.</FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox3>
         </FeaturesAreaStyles>

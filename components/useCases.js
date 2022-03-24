@@ -88,6 +88,7 @@ const CodeUseCaseExample = styled.div`
     margin: 1rem;
     width: 90%;
     z-index: 1;
+    font-family: "F37 Jan Regular";
 `
 
 const CodeSearchBox = styled.div`
@@ -194,6 +195,7 @@ const Subheading = styled.h3`
     font-size: 2.5rem;
     margin: 1rem;
     text-align: center;
+    text-transform: lowercase;
 `
 
 const ExternalLinkArea = styled.div`
@@ -217,10 +219,11 @@ const UseCaseArea = styled.div`
 const Pill = styled.div`
     border-radius: 50px;
     padding: 0.6rem 1.2rem;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
 `
 
 const ExternalLinkPill = styled(Pill)`
+    font-size: 0.7rem;
     text-transform: uppercase;
     border: 1px solid #FC4B6B;
     color: white;
@@ -235,6 +238,7 @@ const MainUseCaseRow = styled(ExternalLinkArea)`
 
 const UseCaseRow = styled(ExternalLinkArea)`
     gap: 1rem;
+    margin: 0;
 `
 
 const UseCasePill = styled(Pill)`
