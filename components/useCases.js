@@ -16,7 +16,7 @@ const UseCasesPageStyles = styled.div`
       content: '';
       position: absolute;
       width: 200px;
-      height: 80vh;
+      height: 90vh;
       left: 65%;
       top: 15%;
       background: #FFD542;
@@ -29,7 +29,7 @@ const UseCasesPageStyles = styled.div`
       content: '';
       position: absolute;
       width: 200px;
-      height: 80vh;
+      height: 90vh;
       left: 65%;
       top: 15%;
       background: pink;
@@ -37,6 +37,16 @@ const UseCasesPageStyles = styled.div`
       opacity: 0.25;
       filter: blur(50px);
       transform: rotate(42deg);
+  }
+  @media (max-width: 650px) {
+    &:after, &:before {
+        top: 20%;
+    }
+  }
+  @media (max-width: 450px) {
+    &:after, &:before {
+        top: 25%;
+    }
   }
 `
 
