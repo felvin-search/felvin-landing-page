@@ -29,6 +29,19 @@ const HeroStyle = styled.div`
 const BackgroundSpline = styled(Spline)`
   z-index: -1;
   position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  & canvas {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const HeroText = styled.div`

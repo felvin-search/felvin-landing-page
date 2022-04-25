@@ -1,5 +1,8 @@
 import styled from 'styled-components'
-import Breakpoints from '../shared/Breakpoints';
+import dynamic from 'next/dynamic';
+const Spline = dynamic(() => import('@splinetool/react-spline'), {
+  ssr: false,
+});
 
 const FeaturesPageStyles = styled.div`
   min-height: 100vh;
@@ -66,7 +69,25 @@ const FeatureBox3 = styled(FeatureBox)`
 `
 
 const EmptyHalf = styled.div`
+  position: relative;
   height: 50%;
+`
+
+const BackgroundSpline = styled(Spline)`
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+
+  & canvas {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 30%;
+    left: 70%;
+    transform: translate(-50%, -50%);
+  }
 `
 
 const FeatureDescription = styled.div`
@@ -88,24 +109,38 @@ export default function FeaturesPage() {
         <FeaturesHeading>features</FeaturesHeading>
         <FeaturesAreaStyles>
           <FeatureBox>
-            <EmptyHalf />
+            <EmptyHalf>
+              <BackgroundSpline scene="/scene.spline"/>
+            </EmptyHalf>
             <FeatureDescription>
               <FeatureDescriptionHead>Open Source</FeatureDescriptionHead>
-              <FeatureDescriptionBody>Be it finding code, comparing cars or find your next favourite holiday destination, with Felvin you won’t have to go anywhere else.</FeatureDescriptionBody>
+              <FeatureDescriptionBody>
+                All the instant apps you see on the website are open source. 
+                Find the repository here:
+                https://github.com/felvin-search/instant-apps
+              </FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox>
           <FeatureBox2>
-            <EmptyHalf />
+            <EmptyHalf>
+              <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline"/>
+            </EmptyHalf>
             <FeatureDescription>
               <FeatureDescriptionHead>Community Driven</FeatureDescriptionHead>
-              <FeatureDescriptionBody>Open source repo here and the community knows the best and can drive the best result.</FeatureDescriptionBody>
+              <FeatureDescriptionBody>
+                Instant apps are created by the small but mighty Felvin community. Drive the best results with their help.
+              </FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox2>
           <FeatureBox3>
-            <EmptyHalf />
+            <EmptyHalf>
+              <BackgroundSpline scene="https://prod.spline.design/uoEBJkJw3c12nE9d/scene.spline"/>
+            </EmptyHalf>
             <FeatureDescription>
-              <FeatureDescriptionHead>Truly Extensible</FeatureDescriptionHead>
-              <FeatureDescriptionBody>Wished you could improve your search experience? Now we give this power to you.</FeatureDescriptionBody>
+              <FeatureDescriptionHead>Customizable</FeatureDescriptionHead>
+              <FeatureDescriptionBody>
+                Create and modify instant apps according to your specific needs. Make search what you want it to be.
+              </FeatureDescriptionBody>
             </FeatureDescription>
           </FeatureBox3>
         </FeaturesAreaStyles>
