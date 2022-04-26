@@ -1,9 +1,9 @@
-import styled from 'styled-components'
-import SyntaxHighlighter from 'react-syntax-highlighter'
-import { a11yDark } from 'react-syntax-highlighter/dist/cjs/styles/hljs'
+import styled from "styled-components";
+import SyntaxHighlighter from "react-syntax-highlighter";
+import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 
 const UseCasesPageStyles = styled.div`
-  background-color: #1A1A1A;
+  background-color: #1a1a1a;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -13,104 +13,111 @@ const UseCasesPageStyles = styled.div`
   position: relative;
   overflow-x: hidden;
   &:before {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 90vh;
-      left: 65%;
-      top: 15%;
-      background: #FFD542;
-      mix-blend-mode: normal;
-      opacity: 0.30;
-      filter: blur(50px);
-      transform: rotate(28deg);
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 90vh;
+    left: 65%;
+    top: 15%;
+    background: #ffd542;
+    mix-blend-mode: normal;
+    opacity: 0.3;
+    filter: blur(50px);
+    transform: rotate(28deg);
   }
   &:after {
-      content: '';
-      position: absolute;
-      width: 200px;
-      height: 90vh;
-      left: 65%;
-      top: 15%;
-      background: pink;
-      mix-blend-mode: normal;
-      opacity: 0.25;
-      filter: blur(50px);
-      transform: rotate(42deg);
+    content: "";
+    position: absolute;
+    width: 200px;
+    height: 90vh;
+    left: 65%;
+    top: 15%;
+    background: pink;
+    mix-blend-mode: normal;
+    opacity: 0.25;
+    filter: blur(50px);
+    transform: rotate(42deg);
   }
   @media (max-width: 650px) {
-    &:after, &:before {
-        top: 20%;
+    &:after,
+    &:before {
+      top: 20%;
     }
   }
   @media (max-width: 450px) {
-    &:after, &:before {
-        top: 25%;
+    &:after,
+    &:before {
+      top: 25%;
     }
   }
-`
+`;
 
 const Heading = styled.h2`
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: -0.2rem;
-    background: linear-gradient(90deg, #29EF8A -21.97%, #FFD542 18.69%, #F1B1CD 55.53%, #FA3B5E 100%);
-    font-size: 4rem;
-    margin: 1rem;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
-    text-align: center;
-`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: -0.2rem;
+  background: linear-gradient(
+    90deg,
+    #29ef8a -21.97%,
+    #ffd542 18.69%,
+    #f1b1cd 55.53%,
+    #fa3b5e 100%
+  );
+  font-size: 4rem;
+  margin: 1rem;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  text-align: center;
+`;
 
-const HeadingLine = styled.div`
-`
+const HeadingLine = styled.div``;
 
 const HeadingLine1 = styled(HeadingLine)`
-    margin-bottom: -0.5rem;
-`
+  margin-bottom: -0.5rem;
+`;
 
 const MainUseCase = styled.span`
-    color: white;
-    opacity: ${props => props.highlighted? "1" : "0.3"};
-    font-size: 2rem;
-`
+  color: white;
+  opacity: ${(props) => (props.highlighted ? "1" : "0.3")};
+  font-size: 2rem;
+`;
 
 const CodeUseCaseExample = styled.div`
-    background: rgba(0,0,0,0.9);
-    flex-grow: 1;
-    border-radius: 50px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 2rem;
-    margin: 1rem;
-    width: 90%;
-    z-index: 1;
-    font-family: "F37 Jan Regular";
-`
+  background: rgba(0, 0, 0, 0.9);
+  flex-grow: 1;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  margin: 1rem;
+  width: 90%;
+  z-index: 1;
+  font-family: "F37 Jan Regular";
+`;
 
 const CodeSearchBox = styled.div`
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 60px;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    gap: 1rem;
-    justify-content: space-around;
-    color: white;
-    padding: 2rem;
-`
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 60px;
+  display: flex;
+  flex-direction: row;
+  align-self: center;
+  gap: 1rem;
+  justify-content: space-around;
+  color: white;
+  padding: 2rem;
+`;
 
 const MySyntaxHighlighter = styled(SyntaxHighlighter)`
-    border-radius: 30px;
-    background: rgba(255, 255, 255, 0.1);
-    width: clamp(300px, 600px, 90%);
-    height: 50vh;
-    overflow-y: auto;
-    -webkit-scrollbar: none;
-`
+  border-radius: 30px;
+  background: rgba(255, 255, 255, 0.1);
+  width: clamp(300px, 600px, 90%);
+  height: 50vh;
+  overflow-y: auto;
+  -webkit-scrollbar: none;
+`;
 
 const CodeSnippet = `/*
 * MergeSort implementation.
@@ -159,148 +166,156 @@ export function merge (list1, list2) {
    const subList2 = list.slice(listHalf, list.length)
  
    return merge(mergeSort(subList1), mergeSort(subList2))
- }`
+ }`;
 
 const FancyTextArea = styled.div`
-    height: 40vh;
-    position: relative;
-`
+  height: 40vh;
+  position: relative;
+`;
 
 const FancyText = styled.div`
-    position: absolute;
-    transform: translateX(-50%);
-    background: radial-gradient(#FFD542, #1A1A1A 70%);
-    -webkit-text-stroke: 1px transparent;
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: #1A1A1A;
-    font-size: 10rem;
-    height: 10rem;
-`
+  position: absolute;
+  transform: translateX(-50%);
+  background: radial-gradient(#ffd542, #1a1a1a 70%);
+  -webkit-text-stroke: 1px transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: #1a1a1a;
+  font-size: 10rem;
+  height: 10rem;
+`;
 
 const FancyText1 = styled(FancyText)`
-    top: 40%;
-`
+  top: 40%;
+`;
 
 const FancyText2 = styled(FancyText)`
-    top: 50%;
-`
+  top: 50%;
+`;
 
 const FancyText3 = styled(FancyText)`
-    top: 60%;
-`
+  top: 60%;
+`;
 
 const Subheading = styled.h3`
-    color: #D9D9D9;
-    font-size: 2.5rem;
-    margin: 1rem;
-    text-align: center;
-    text-transform: lowercase;
-`
+  color: #d9d9d9;
+  font-size: 2.5rem;
+  margin: 1rem;
+  text-align: center;
+  text-transform: lowercase;
+`;
 
 const ExternalLinkArea = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    gap: 2rem;
-    margin: 0.5rem;
-`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 2rem;
+  margin: 0.5rem;
+`;
 
 const UseCaseArea = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    margin: 1rem;
-    margin-bottom: 3rem;
-    gap: 0.8rem;
-`
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+  margin-bottom: 3rem;
+  gap: 0.8rem;
+`;
 
 const Pill = styled.div`
-    border-radius: 50px;
-    padding: 0.6rem 1.2rem;
-    font-size: 0.8rem;
-`
+  border-radius: 50px;
+  padding: 0.6rem 1.2rem;
+  font-size: 0.8rem;
+`;
 
 const ExternalLinkPill = styled(Pill)`
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    border: 1px solid #FC4B6B;
-    color: white;
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-`
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  border: 1px solid #fc4b6b;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`;
 
 const MainUseCaseRow = styled(ExternalLinkArea)`
-    gap: 3rem;
-`
+  gap: 3rem;
+`;
 
 const UseCaseRow = styled(ExternalLinkArea)`
-    gap: 1rem;
-    margin: 0;
-`
+  gap: 1rem;
+  margin: 0;
+`;
 
 const UseCasePill = styled(Pill)`
-    background-color: #E8E8E8;
-    color: #232323;
-`
+  background-color: #e8e8e8;
+  color: #232323;
+`;
 
 export default function UseCasesPage() {
-    return (
-        <UseCasesPageStyles>
-            <Heading>
-                <HeadingLine1>you and felvin can build</HeadingLine1>
-                <HeadingLine>magic together</HeadingLine>
-            </Heading>
-            <MainUseCaseRow>
-                <MainUseCase>Books</MainUseCase>
-                <MainUseCase highlighted >Code</MainUseCase>
-            </MainUseCaseRow>
-            <CodeUseCaseExample>
-                <CodeSearchBox><img src="/search_icon.svg" /> merge sort in javascript</CodeSearchBox>
-                <MySyntaxHighlighter 
-                    language="javascript"
-                    style={a11yDark}
-                    wrapLongLines={true}
-                    customStyle={{padding: "2rem", overflowX: "hidden"}}
-                >
-                    {CodeSnippet}
-                </MySyntaxHighlighter>
-            </CodeUseCaseExample>
-            <FancyTextArea>
-                <FancyText1>more</FancyText1>
-                <FancyText2>more</FancyText2>
-                <FancyText3>more</FancyText3>
-            </FancyTextArea>
-            <Subheading>See more potential use cases for Felvin</Subheading>
-            <ExternalLinkArea>
-                <ExternalLinkPill><img src="/github_white.svg" /> Fork On Git</ExternalLinkPill>
-                <ExternalLinkPill><img src="/cloud_down.svg" /> Try the Beta</ExternalLinkPill>
-                <ExternalLinkPill><img src="/diagonal_arrow.svg" /> Submit Ideas</ExternalLinkPill>
-            </ExternalLinkArea>
-            <UseCaseArea>
-                <UseCaseRow>
-                    <UseCasePill>Code Snippets</UseCasePill>
-                    <UseCasePill>Regex Validator</UseCasePill>
-                    <UseCasePill>Latex Render</UseCasePill>
-                </UseCaseRow>
-                <UseCaseRow>
-                    <UseCasePill>HTTP Status codes</UseCasePill>
-                    <UseCasePill>CSV to JSON</UseCasePill>
-                    <UseCasePill>Markdown to HTML</UseCasePill>
-                </UseCaseRow>
-                <UseCaseRow>
-                    <UseCasePill>Train timing finder</UseCasePill>
-                    <UseCasePill>Search tweets of people you follow</UseCasePill>
-                    <UseCasePill>Logo finder</UseCasePill>
-                </UseCaseRow>
-                <UseCaseRow>
-                    <UseCasePill>Royalty free Music finder</UseCasePill>
-                    <UseCasePill>Book finder</UseCasePill>
-                    <UseCasePill>PDF merger</UseCasePill>
-                </UseCaseRow>
-            </UseCaseArea>
-        </UseCasesPageStyles>
-    )
+  return (
+    <UseCasesPageStyles>
+      <Heading>
+        <HeadingLine1>you and felvin can build</HeadingLine1>
+        <HeadingLine>magic together</HeadingLine>
+      </Heading>
+      <MainUseCaseRow>
+        <MainUseCase>Books</MainUseCase>
+        <MainUseCase highlighted>Code</MainUseCase>
+      </MainUseCaseRow>
+      <CodeUseCaseExample>
+        <CodeSearchBox>
+          <img src="/search_icon.svg" /> merge sort in javascript
+        </CodeSearchBox>
+        <MySyntaxHighlighter
+          language="javascript"
+          style={a11yDark}
+          wrapLongLines={true}
+          customStyle={{ padding: "2rem", overflowX: "hidden" }}
+        >
+          {CodeSnippet}
+        </MySyntaxHighlighter>
+      </CodeUseCaseExample>
+      <FancyTextArea>
+        <FancyText1>more</FancyText1>
+        <FancyText2>more</FancyText2>
+        <FancyText3>more</FancyText3>
+      </FancyTextArea>
+      <Subheading>See more potential use cases for Felvin</Subheading>
+      <ExternalLinkArea>
+        <ExternalLinkPill>
+          <img src="/github_white.svg" /> Fork On Git
+        </ExternalLinkPill>
+        <ExternalLinkPill>
+          <img src="/cloud_down.svg" /> Try the Beta
+        </ExternalLinkPill>
+        <ExternalLinkPill>
+          <img src="/diagonal_arrow.svg" /> Submit Ideas
+        </ExternalLinkPill>
+      </ExternalLinkArea>
+      <UseCaseArea>
+        <UseCaseRow>
+          <UseCasePill>Code Snippets</UseCasePill>
+          <UseCasePill>Regex Validator</UseCasePill>
+          <UseCasePill>Latex Render</UseCasePill>
+        </UseCaseRow>
+        <UseCaseRow>
+          <UseCasePill>HTTP Status codes</UseCasePill>
+          <UseCasePill>CSV to JSON</UseCasePill>
+          <UseCasePill>Markdown to HTML</UseCasePill>
+        </UseCaseRow>
+        <UseCaseRow>
+          <UseCasePill>Train timing finder</UseCasePill>
+          <UseCasePill>Search tweets of people you follow</UseCasePill>
+          <UseCasePill>Logo finder</UseCasePill>
+        </UseCaseRow>
+        <UseCaseRow>
+          <UseCasePill>Royalty free Music finder</UseCasePill>
+          <UseCasePill>Book finder</UseCasePill>
+          <UseCasePill>PDF merger</UseCasePill>
+        </UseCaseRow>
+      </UseCaseArea>
+    </UseCasesPageStyles>
+  );
 }
