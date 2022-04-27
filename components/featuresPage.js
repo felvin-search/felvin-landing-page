@@ -110,7 +110,7 @@ export default function FeaturesPage() {
         <FeaturesAreaStyles>
           <FeatureBox>
             <EmptyHalf>
-              <BackgroundSpline scene="/scene.spline"/>
+              {/* <BackgroundSpline scene="/scene.spline"/> */}
             </EmptyHalf>
             <FeatureDescription>
               <FeatureDescriptionHead>Open Source</FeatureDescriptionHead>
@@ -123,7 +123,7 @@ export default function FeaturesPage() {
           </FeatureBox>
           <FeatureBox2>
             <EmptyHalf>
-              <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline"/>
+              {/* <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline"/> */}
             </EmptyHalf>
             <FeatureDescription>
               <FeatureDescriptionHead>Community Driven</FeatureDescriptionHead>
@@ -134,7 +134,7 @@ export default function FeaturesPage() {
           </FeatureBox2>
           <FeatureBox3>
             <EmptyHalf>
-              <BackgroundSpline scene="https://prod.spline.design/uoEBJkJw3c12nE9d/scene.spline"/>
+              {/* <BackgroundSpline scene="https://prod.spline.design/uoEBJkJw3c12nE9d/scene.spline"/> */}
             </EmptyHalf>
             <FeatureDescription>
               <FeatureDescriptionHead>Customizable</FeatureDescriptionHead>

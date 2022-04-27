@@ -125,7 +125,7 @@ export default function Home() {
     return ( <HomeStyle>
                 <Header />
                 <HeroStyle>
-                  <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/>
+                  {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/> */}
                   <HeroText>
                     <HeroTextTransparent>search less,</HeroTextTransparent>
                     <HeroTextSolid>do more</HeroTextSolid>

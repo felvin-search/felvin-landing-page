@@ -51,6 +51,14 @@ const UseCasesPageStyles = styled.div`
     }
   }
 `;
+const LinkExternal = styled.a`
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+`;
 
 const Heading = styled.h2`
   display: flex;
@@ -285,13 +293,19 @@ export default function UseCasesPage() {
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
         <ExternalLinkPill>
-          <img src="/github_white.svg" /> Fork On Git
+          <LinkExternal href="https://github.com/felvin-search">
+            <img src="/github_white.svg" /> Fork On Git
+          </LinkExternal>
         </ExternalLinkPill>
         <ExternalLinkPill>
-          <img src="/cloud_down.svg" /> Try the Beta
+          <LinkExternal href="https://felvin.com/">
+            <img src="/cloud_down.svg" /> Try the Beta
+          </LinkExternal>
         </ExternalLinkPill>
         <ExternalLinkPill>
-          <img src="/diagonal_arrow.svg" /> Submit Ideas
+          <LinkExternal href="https://discord.gg/FNMUavyu">
+            <img src="/diagonal_arrow.svg" /> Submit Ideas
+          </LinkExternal>
         </ExternalLinkPill>
       </ExternalLinkArea>
       <UseCaseArea>
