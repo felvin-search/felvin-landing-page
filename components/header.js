@@ -108,7 +108,11 @@ line-height: 30px; */
   }
 `;
 const Comp4 = () => {
-  return <BetaButtonStyle>Try Beta</BetaButtonStyle>;
+  return (
+    <LinkExternal href="https://felvin.com/">
+      <BetaButtonStyle>Try Beta</BetaButtonStyle>
+    </LinkExternal>
+  );
 };
 
 // ================= Main Header =================
@@ -135,9 +139,8 @@ export default function Header() {
         <LinkExternal href="https://github.com/felvin-search">
           <Comp3 />
         </LinkExternal>
-        <LinkExternal href="https://felvin.com/">
-          <Comp4 />
-        </LinkExternal>
+
+        <Comp4 />
       </RightSection>
     </HeaderStyle>
   );

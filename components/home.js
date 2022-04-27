@@ -3,9 +3,11 @@ import Logo from './Logo'
 import Header from './header'
 import HeroArea from './heroArea'
 import dynamic from 'next/dynamic';
+
 const Spline = dynamic(() => import('@splinetool/react-spline'), {
   ssr: false,
 });
+
 const HomeStyle = styled.div`
   /* font-size: 50px; */
   min-height: 100vh;
@@ -125,7 +127,7 @@ export default function Home() {
     return ( <HomeStyle>
                 <Header />
                 <HeroStyle>
-                  {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/> */}
+                  <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/>
                   <HeroText>
                     <HeroTextTransparent>search less,</HeroTextTransparent>
                     <HeroTextSolid>do more</HeroTextSolid>
