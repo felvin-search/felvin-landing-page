@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import dynamic from "next/dynamic";
+
 const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
 });
@@ -60,6 +61,7 @@ const FeatureBox = styled.div`
   border-radius: 50px;
   width: clamp(200px, 28vw, 400px);
   height: 50vh;
+  overflow: hidden;
   background-image: radial-gradient(
     farthest-corner at 75px 100px,
     hsla(326, 100%, 80%, 1) 0%,
@@ -95,6 +97,7 @@ const FeatureBox3 = styled(FeatureBox)`
 
 const EmptyHalf = styled.div`
   position: relative;
+
   height: 50%;
   width: 100%;
 `;
@@ -114,6 +117,22 @@ const BackgroundSpline = styled(Spline)`
     left: 70%;
     transform: translate(-50%, -50%);
   }
+`;
+const FeatureImage = styled.img`
+  position: absolute;
+  display: block;
+  top: 0;
+
+  right: 0;
+  overflow: hidden;
+  height: 15rem;
+  width: 15rem;
+  // aspect-ratio: 1;
+`;
+const FeatureImage1 = styled(FeatureImage)`
+  left: 0;
+  top: -5%;
+  right: unset;
 `;
 
 const FeatureDescription = styled.div`
@@ -136,7 +155,8 @@ export default function FeaturesPage() {
       <FeaturesAreaStyles>
         <FeatureBox>
           <EmptyHalf>
-            <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline" />
+            {/* <BackgroundSpline scene="/scene.spline" /> */}
+            <FeatureImage src="/snowFlake.png" alt="texture" />
           </EmptyHalf>
           <FeatureDescription>
             <FeatureDescriptionHead>Open Source</FeatureDescriptionHead>
@@ -148,7 +168,8 @@ export default function FeaturesPage() {
         </FeatureBox>
         <FeatureBox2>
           <EmptyHalf>
-            <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline" />
+            <FeatureImage src="/clay.png" />
+            {/* <BackgroundSpline scene="https://prod.spline.design/9eXZLEGhiWSxWmzL/scene.spline" /> */}
           </EmptyHalf>
           <FeatureDescription>
             <FeatureDescriptionHead>Community Driven</FeatureDescriptionHead>
@@ -160,7 +181,8 @@ export default function FeaturesPage() {
         </FeatureBox2>
         <FeatureBox3>
           <EmptyHalf>
-            <BackgroundSpline scene="https://prod.spline.design/uoEBJkJw3c12nE9d/scene.spline" />
+            {/* <BackgroundSpline scene="https://prod.spline.design/uoEBJkJw3c12nE9d/scene.spline" /> */}
+            <FeatureImage1 helix src="/helix.png" />
           </EmptyHalf>
           <FeatureDescription>
             <FeatureDescriptionHead>Customizable</FeatureDescriptionHead>

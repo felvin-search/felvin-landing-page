@@ -9,6 +9,9 @@ const HeaderStyle = styled.div`
 `;
 const LinkExternal = styled.a`
   text-decoration: none;
+  height: auto;
+  display: flex;
+  align-items: center;
   cursor: pointer;
   color: #000;
 `;
@@ -109,9 +112,9 @@ line-height: 30px; */
 `;
 const Comp4 = () => {
   return (
-    <LinkExternal href="https://felvin.com/">
+   
       <BetaButtonStyle>Try Beta</BetaButtonStyle>
-    </LinkExternal>
+   
   );
 };
 
@@ -139,8 +142,9 @@ export default function Header() {
         <LinkExternal href="https://github.com/felvin-search">
           <Comp3 />
         </LinkExternal>
-
+        <LinkExternal href="https://felvin.com/">
         <Comp4 />
+        </LinkExternal>
       </RightSection>
     </HeaderStyle>
   );
