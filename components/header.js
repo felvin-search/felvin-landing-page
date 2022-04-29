@@ -90,6 +90,7 @@ const Comp3 = () => {
     </CompStyle>
   );
 };
+
 // ================= Comp 4 ======================
 const BetaButtonStyle = styled.div`
   background: #232323;
@@ -117,6 +118,7 @@ const Comp4 = () => {
    
   );
 };
+export {Comp4};
 
 // ================= Main Header =================
 const LeftSection = styled.div`

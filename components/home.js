@@ -1,32 +1,54 @@
-import styled from 'styled-components'
-import Logo from './Logo'
-import Header from './header'
-import HeroArea from './heroArea'
-import dynamic from 'next/dynamic';
-
-const Spline = dynamic(() => import('@splinetool/react-spline'), {
+import styled from "styled-components";
+import Logo from "./Logo";
+import Header from "./header";
+import HeroArea from "./heroArea";
+import dynamic from "next/dynamic";
+import { Comp4 } from "./header";
+const Spline = dynamic(() => import("@splinetool/react-spline"), {
   ssr: false,
 });
+const LinkExternal = styled.a`
+  text-decoration: none;
+  height: auto;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  color: #000;
+`;
 
 const HomeStyle = styled.div`
   /* font-size: 50px; */
   min-height: 100vh;
   /* background-color: yellow; */
-  background: radial-gradient(200.18% 300.33% at 0% -48.51%, #2CD687 0%, #FFE178 30.73%, #FFBFDB 58.85%, #FC4B6B 100%);
+  background: radial-gradient(
+    200.18% 300.33% at 0% -48.51%,
+    #2cd687 0%,
+    #ffe178 30.73%,
+    #ffbfdb 58.85%,
+    #fc4b6b 100%
+  );
   /* background-image: url("bg_blob.png"); */
-  display:  flex;
-  flex-direction: column ;
-`
+  display: flex;
+  flex-direction: column;
+`;
 
 const HeroStyle = styled.div`
   text-align: center;
-  display: flex ;
+  display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center ;
+  justify-content: center;
   flex: 1 0 auto;
-  z-index: 2;
-`
+  z-index: 10;
+  & canvas {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
 
 const BackgroundSpline = styled(Spline)`
   z-index: -1;
@@ -44,7 +66,26 @@ const BackgroundSpline = styled(Spline)`
     left: 50%;
     transform: translate(-50%, -50%);
   }
-`
+`;
+const BackgroundSpline1 = styled.iframe`
+  z-index: -1;
+  position: absolute;
+  display: block;
+  height: 100%;
+  width: 100%;
+  border: none;
+  overflow: hidden;
+  margin: 0 auto;
+
+  & canvas {
+    height: 600px;
+    width: 600px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+`;
 
 const HeroText = styled.div`
   font-size: 3rem;
@@ -58,12 +99,12 @@ const HeroText = styled.div`
   @media (max-width: 350px) {
     font-size: 1.2rem;
   }
-`
+`;
 
 const HeroTextSolid = styled.h1`
   -webkit-text-stroke: 1px #232323;
   margin: 0rem;
-  `
+`;
 
 const HeroTextTransparent = styled(HeroTextSolid)`
   color: transparent;
@@ -71,7 +112,7 @@ const HeroTextTransparent = styled(HeroTextSolid)`
   @media (max-width: 450px) {
     margin-bottom: -0.5rem;
   }
-`
+`;
 
 const Tagline = styled.h2`
   font-size: 1rem;
@@ -79,11 +120,11 @@ const Tagline = styled.h2`
   margin: 0;
   color: #232323;
   line-height: 1.5rem;
-`
+`;
 
 const SearchForm = styled.form`
   position: relative;
-`
+`;
 
 const SearchBox = styled.input`
   padding: 1.5rem;
@@ -96,7 +137,7 @@ const SearchBox = styled.input`
     padding: 1rem;
     padding-right: 55px;
   }
-`
+`;
 
 const SearchButton = styled.button`
   background: none;
@@ -115,30 +156,40 @@ const SearchButton = styled.button`
   &:hover {
     opacity: 0.6;
   }
-`
+`;
 
 const SearchButtonIcon = styled.svg`
   height: 36px;
   width: 36px;
-`
+`;
 
 // TODO: Make the image come out fine
 export default function Home() {
-    return ( <HomeStyle>
-                <Header />
-                <HeroStyle>
-                  <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/>
-                  <HeroText>
-                    <HeroTextTransparent>search less,</HeroTextTransparent>
-                    <HeroTextSolid>do more</HeroTextSolid>
-                  </HeroText>
-                  <Tagline>Build customisable and community-driven search experiences</Tagline>
-                  <SearchForm>
-                    <SearchBox placeholder='SEEK AND YOU SHALL FIND...'/>
+  return (
+    <HomeStyle>
+      <Header />
+      <HeroStyle>
+        <BackgroundSpline1
+          src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
+          frameborder="0"
+        />
+        
+        {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/> */}
+        <HeroText>
+          <HeroTextTransparent>search less,</HeroTextTransparent>
+          <HeroTextSolid>do more</HeroTextSolid>
+        </HeroText>
+        <Tagline>
+          Build customisable and community-driven search experiences
+        </Tagline>
+        <SearchForm>
+          {/* <SearchBox placeholder='SEEK AND YOU SHALL FIND...'/>
                     <SearchButton type='submit' >
                       <SearchButtonIcon as={Logo.Icon} />
-                    </SearchButton>                    
-                  </SearchForm>
-                </HeroStyle>
-            </HomeStyle>);
+                    </SearchButton>                     */}
+          <Comp4 hero />
+        </SearchForm>
+      </HeroStyle>
+    </HomeStyle>
+  );
 }
