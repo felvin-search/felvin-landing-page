@@ -122,12 +122,10 @@ const FeatureImage = styled.img`
   position: absolute;
   display: block;
   top: 0;
-
   right: 0;
   overflow: hidden;
-  height: 15rem;
-  width: 15rem;
-  // aspect-ratio: 1;
+  height: clamp(10rem,50vw,15rem);
+  aspect-ratio: 1;
 `;
 const FeatureImage1 = styled(FeatureImage)`
   left: 0;

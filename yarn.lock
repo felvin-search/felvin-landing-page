@@ -279,23 +279,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@splinetool/react-spline@npm:^2.0.0":
-  version: 2.0.0
-  resolution: "@splinetool/react-spline@npm:2.0.0"
+"@splinetool/react-spline@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@splinetool/react-spline@npm:2.1.0"
   peerDependencies:
     "@splinetool/runtime": "*"
-    react: ^17.0.0
-    react-dom: ^17.0.0
-  checksum: 06ae08c327a06295986911444f1abc6bb71e7cb3a9a8bb9b0be07561f50e44f19ce45c3fde61e9f247a5408063c0b8b8934d75d13d997cf950e545cee8715421
+    react: ">=17.0.0"
+    react-dom: ">=17.0.0"
+  checksum: 93825f160a63988151a053494a5ecad12f9ca45bb34a40ec319d299ab3fe066e37969f1608ff42461cb605a9792deecfdaa38df0b9f17729e63896bb01de1393
   languageName: node
   linkType: hard
 
-"@splinetool/runtime@npm:^0.9.17":
-  version: 0.9.17
-  resolution: "@splinetool/runtime@npm:0.9.17"
+"@splinetool/runtime@npm:^0.9.37":
+  version: 0.9.37
+  resolution: "@splinetool/runtime@npm:0.9.37"
   dependencies:
     on-change: ^4.0.0
-  checksum: 59d7a49c8267880c6a52154de10641826b28641050fe8d0a87591b124a89434e623c45d5ac7945ef13911289eaae2c8c248c4fdd5cebb7c613a6563269a8b683
+  checksum: 7db612ed8b94dd2f8701dac6eb14662651b1896bc1b8a119bea4dee26d3af4f956b22573c873323c02f1ea4f11f890a75de5e386eb540963fa493b2daca3ed4f
   languageName: node
   linkType: hard
 
@@ -796,6 +796,17 @@ next@latest:
   languageName: node
   linkType: hard
 
+"react-spline@npm:^1.2.1":
+  version: 1.2.1
+  resolution: "react-spline@npm:1.2.1"
+  dependencies:
+    three: 0.123.0
+  peerDependencies:
+    react: ^16.0.0
+  checksum: 14f93d3f1ef3846af169e3ca1e0d01d4986517824e3c9d2755986749efe35ea2db7f7e3ca2f66e066cabad55d0b56954ce3f5b2b7f13aeb9f1e26a971dcd41d1
+  languageName: node
+  linkType: hard
+
 "react-syntax-highlighter@npm:^15.5.0":
   version: 15.5.0
   resolution: "react-syntax-highlighter@npm:15.5.0"
@@ -843,13 +854,14 @@ next@latest:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@splinetool/react-spline": ^2.0.0
-    "@splinetool/runtime": ^0.9.17
+    "@splinetool/react-spline": ^2.1.0
+    "@splinetool/runtime": ^0.9.37
     next: latest
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
     react-is: ^17.0.2
+    react-spline: ^1.2.1
     react-syntax-highlighter: ^15.5.0
     styled-components: ^5.2.3
   languageName: unknown
@@ -935,6 +947,13 @@ next@latest:
   dependencies:
     has-flag: ^3.0.0
   checksum: 95f6f4ba5afdf92f495b5a912d4abee8dcba766ae719b975c56c084f5004845f6f5a5f7769f52d53f40e21952a6d87411bafe34af4a01e65f9926002e38e1dac
+  languageName: node
+  linkType: hard
+
+"three@npm:0.123.0":
+  version: 0.123.0
+  resolution: "three@npm:0.123.0"
+  checksum: aeb781cc962ab07b3eb53e0f3f1e0875b125d304ac5dfc884600979bf2b0650b5cdadf790dfaad12d613d32a2499b96514f25ba4aa72674d45cc037e7d154164
   languageName: node
   linkType: hard
 

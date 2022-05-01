@@ -9,11 +9,6 @@ const Spline = dynamic(() => import("@splinetool/react-spline"), {
 });
 const LinkExternal = styled.a`
   text-decoration: none;
-  height: auto;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: #000;
 `;
 
 const HomeStyle = styled.div`
@@ -40,14 +35,14 @@ const HeroStyle = styled.div`
   justify-content: center;
   flex: 1 0 auto;
   z-index: 10;
-  & canvas {
+  /* & canvas {
     height: 600px;
     width: 600px;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-  }
+  } */
 `;
 
 const BackgroundSpline = styled(Spline)`
@@ -59,6 +54,7 @@ const BackgroundSpline = styled(Spline)`
   overflow: hidden;
 
   & canvas {
+    touch-action: none;
     height: 600px;
     width: 600px;
     position: absolute;
@@ -68,23 +64,25 @@ const BackgroundSpline = styled(Spline)`
   }
 `;
 const BackgroundSpline1 = styled.iframe`
+  pointer-events: none;
   z-index: -1;
   position: absolute;
-  display: block;
-  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
   width: 100%;
-  border: none;
-  overflow: hidden;
-  margin: 0 auto;
-
+  height: 100%;
   & canvas {
-    height: 600px;
-    width: 600px;
     position: absolute;
-    top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
   }
+`;
+const IframeContainer = styled.div`
+  position: absolute;
+  overflow: hidden;
+  width: 70%;
+  padding-top: 75%;
 `;
 
 const HeroText = styled.div`
@@ -169,25 +167,32 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
-        <BackgroundSpline1
-          src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
-          frameborder="0"
-        />
-        
-        {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline"/> */}
+        {/* <IframeContainer>
+          <BackgroundSpline1
+            src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
+            frameborder="0"
+            width="100%"
+            height="100%"
+          />
+        </IframeContainer> */}
+
+        <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline" />
         <HeroText>
-          <HeroTextTransparent>search less,</HeroTextTransparent>
-          <HeroTextSolid>do more</HeroTextSolid>
+          <HeroTextTransparent>Search Engine</HeroTextTransparent>
+          <HeroTextTransparent>For</HeroTextTransparent>
+          <HeroTextSolid>Engineers</HeroTextSolid>
         </HeroText>
-        <Tagline>
+        {/* <Tagline>
           Build customisable and community-driven search experiences
-        </Tagline>
+        </Tagline> */}
         <SearchForm>
           {/* <SearchBox placeholder='SEEK AND YOU SHALL FIND...'/>
                     <SearchButton type='submit' >
                       <SearchButtonIcon as={Logo.Icon} />
                     </SearchButton>                     */}
-          <Comp4 hero />
+          <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
+            <Comp4 hero />
+          </LinkExternal>
         </SearchForm>
       </HeroStyle>
     </HomeStyle>

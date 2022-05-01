@@ -265,8 +265,8 @@ export default function UseCasesPage() {
   return (
     <UseCasesPageStyles>
       <Heading>
-        <HeadingLine1>you and felvin can build</HeadingLine1>
-        <HeadingLine>magic together</HeadingLine>
+        <HeadingLine1>See Felvin in Action</HeadingLine1>
+        {/* <HeadingLine>magic together</HeadingLine> */}
       </Heading>
       <MainUseCaseRow>
         <MainUseCase>Books</MainUseCase>
@@ -302,11 +302,11 @@ export default function UseCasesPage() {
             <img src="/cloud_down.svg" /> Try the Beta
           </LinkExternal>
         </ExternalLinkPill>
-        <ExternalLinkPill>
+        {/* <ExternalLinkPill>
           <LinkExternal href="https://discord.gg/FNMUavyu">
             <img src="/diagonal_arrow.svg" /> Submit Ideas
           </LinkExternal>
-        </ExternalLinkPill>
+        </ExternalLinkPill> */}
       </ExternalLinkArea>
       <UseCaseArea>
         <UseCaseRow>

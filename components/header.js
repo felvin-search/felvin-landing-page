@@ -9,11 +9,7 @@ const HeaderStyle = styled.div`
 `;
 const LinkExternal = styled.a`
   text-decoration: none;
-  height: auto;
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  color: #000;
+ 
 `;
 
 const Icon = styled.svg`
@@ -43,6 +39,8 @@ const CompStyle = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 1rem;
+  
 `;
 // ================= Comp 1 =====================
 
@@ -74,8 +72,10 @@ const Comp1 = () => {
 const Comp2 = () => {
   return (
     <CompStyle>
+     
       <Icon as={Icons.Discord} />
       <HeaderText>Discord</HeaderText>
+      
     </CompStyle>
   );
 };
@@ -95,15 +95,10 @@ const Comp3 = () => {
 const BetaButtonStyle = styled.div`
   background: #232323;
   border-radius: 50px;
-  /* align-items: center;
-justify-content:center ; */
   margin: 10px;
-  padding: 1rem;
+  padding: 0.8rem 1.5rem;
   font-size: 1rem;
   white-space: nowrap;
-  /* font-weight: 700;
-font-size: 36px;
-line-height: 30px; */
   color: #faf9f9;
   text-transform: uppercase;
   @media (max-width: 400px) {
@@ -112,13 +107,9 @@ line-height: 30px; */
   }
 `;
 const Comp4 = () => {
-  return (
-   
-      <BetaButtonStyle>Try Beta</BetaButtonStyle>
-   
-  );
+  return <BetaButtonStyle>Try Beta</BetaButtonStyle>;
 };
-export {Comp4};
+export { Comp4 };
 
 // ================= Main Header =================
 const LeftSection = styled.div`
@@ -138,15 +129,15 @@ export default function Header() {
         <Comp1 />
       </LeftSection>
       <RightSection>
-        <LinkExternal href="https://discord.gg/FNMUavyu">
+        
           <Comp2 />
-        </LinkExternal>
-        <LinkExternal href="https://github.com/felvin-search">
+       
+        {/* <LinkExternal href="https://github.com/felvin-search">
           <Comp3 />
-        </LinkExternal>
-        <LinkExternal href="https://felvin.com/">
+        </LinkExternal> */}
+        {/* <LinkExternal href="https://felvin.com/">
         <Comp4 />
-        </LinkExternal>
+        </LinkExternal> */}
       </RightSection>
     </HeaderStyle>
   );
