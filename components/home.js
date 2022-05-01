@@ -190,7 +190,7 @@ export default function Home() {
                     <SearchButton type='submit' >
                       <SearchButtonIcon as={Logo.Icon} />
                     </SearchButton>                     */}
-          <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
+          <LinkExternal target='_blank' href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
             <Comp4 hero />
           </LinkExternal>
         </SearchForm>

@@ -292,16 +292,21 @@ export default function UseCasesPage() {
       </FancyTextArea>
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
-        <ExternalLinkPill>
-          <LinkExternal href="https://github.com/felvin-search">
+        {/* <ExternalLinkPill>
+          <LinkExternal target='_blank' href="https://github.com/felvin-search">
             <img src="/github_white.svg" /> Fork On Git
           </LinkExternal>
-        </ExternalLinkPill>
-        <ExternalLinkPill>
-          <LinkExternal href="https://felvin.com/">
+        </ExternalLinkPill> */}
+
+        <LinkExternal
+          target="_blank"
+          href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
+        >
+          <ExternalLinkPill>
             <img src="/cloud_down.svg" /> Try the Beta
-          </LinkExternal>
-        </ExternalLinkPill>
+          </ExternalLinkPill>
+        </LinkExternal>
+
         {/* <ExternalLinkPill>
           <LinkExternal href="https://discord.gg/FNMUavyu">
             <img src="/diagonal_arrow.svg" /> Submit Ideas

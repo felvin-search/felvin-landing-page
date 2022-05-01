@@ -97,7 +97,7 @@ const BetaButtonStyle = styled.div`
   border-radius: 50px;
   margin: 10px;
   padding: 0.8rem 1.5rem;
-  font-size: 1rem;
+  font-size: 2rem;
   white-space: nowrap;
   color: #faf9f9;
   text-transform: uppercase;

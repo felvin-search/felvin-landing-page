@@ -181,15 +181,15 @@ export default function Footer() {
     <FooterStyles>
       <MainText>start building with felvin</MainText>
       <PillArea>
-        <LinkExternal href="https://felvin.com/">
+        <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
           <Pill>Try Beta</Pill>
         </LinkExternal>
-        <LinkExternal href="https://github.com/felvin-search">
+        {/* <LinkExternal href="https://github.com/felvin-search">
           <Pill>Fork on Git</Pill>
-        </LinkExternal>
-        <LinkExternal href="https://discord.gg/FNMUavyu">
+        </LinkExternal> */}
+        {/* <LinkExternal href="https://discord.gg/FNMUavyu">
           <Pill>Submit Ideas</Pill>
-        </LinkExternal>
+        </LinkExternal> */}
       </PillArea>
       <FancyText />
       <LinkArea>
