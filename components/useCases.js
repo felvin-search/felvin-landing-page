@@ -185,6 +185,8 @@ const ExternalLinkPill = styled(Pill)`
 
 const MainUseCaseRow = styled(ExternalLinkArea)`
   gap: 3rem;
+  flex-direction: column;
+  align-items: center;
 `;
 
 const UseCaseRow = styled(ExternalLinkArea)`
@@ -202,6 +204,13 @@ const Cards = styled.div`
   overflow: hidden;
   padding: 5rem;
 `;
+const Tagline = styled.h2`
+  font-size: 1rem;
+  max-width: 600px;
+  margin: 0;
+  color: lightgrey;
+  line-height: 1.5rem;
+`;
 //TODO: TO Make responsive silder
 export default function UseCasesPage() {
   return (
@@ -213,6 +222,12 @@ export default function UseCasesPage() {
       <MainUseCaseRow>
         {/* <MainUseCase>Books</MainUseCase> */}
         <MainUseCase highlighted>Instant Apps</MainUseCase>
+        <Tagline>
+          Instant apps are the small interactive cards which you get for your
+          search queries. We can build instant apps for all kinds of use cases
+          like dictionary, checking football scores, stock prices or notes from
+          your notion or even search history from company slack or anything!
+        </Tagline>
       </MainUseCaseRow>
       <CodeUseCaseExample>
         <Swiper
@@ -222,18 +237,13 @@ export default function UseCasesPage() {
           slidesPerView={1}
           breakpoints={{
             640: {
-              width: 640,
               slidesPerView: 2,
-              centeredSlides: true,
             },
 
             768: {
-              width: 768,
               slidesPerView: 2,
-              centeredSlides: true,
             },
             1024: {
-              width: 1024,
               slidesPerView: 2,
             },
           }}

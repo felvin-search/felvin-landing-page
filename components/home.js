@@ -140,6 +140,15 @@ const SearchButtonIcon = styled.svg`
   height: 36px;
   width: 36px;
 `;
+const IframeCotainer = styled.iframe`
+  height: 600px;
+  width: 600px;
+  position: absolute;
+  z-index: -1;
+  border: none;
+  pointer-events: none;
+  
+`;
 
 // TODO: Make the image come out fine
 export default function Home() {
@@ -147,6 +156,8 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
+        <IframeCotainer src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/" />
+
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>

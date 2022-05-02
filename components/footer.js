@@ -115,6 +115,7 @@ const LinkArea = styled.div`
 const LogoIcon = styled.svg`
   height: 30px;
   width: 30px;
+  margin-right: 6px;
 `;
 
 const LogoText = styled.svg`
