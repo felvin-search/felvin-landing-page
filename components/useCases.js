@@ -1,7 +1,16 @@
 import styled from "styled-components";
 import SyntaxHighlighter from "react-syntax-highlighter";
 import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+// import Swiper core and required modules
+import { Swiper, SwiperSlide } from "swiper/react";
 
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+
+// import required modules
+import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 const UseCasesPageStyles = styled.div`
   background-color: #1a1a1a;
   min-height: 100vh;
@@ -260,6 +269,21 @@ const UseCasePill = styled(Pill)`
   background-color: #e8e8e8;
   color: #232323;
 `;
+const Cards = styled.div`
+  // background: rgba(255, 255, 255, 0.1);
+  width: 85%;
+  padding: 5rem;
+`;
+
+const SwiperContainer=styled(Swiper)`
+  width: 100%;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+
+`
+const SwiperSlides=styled(SwiperSlide)`
+`
 
 export default function UseCasesPage() {
   return (
@@ -269,21 +293,60 @@ export default function UseCasesPage() {
         {/* <HeadingLine>magic together</HeadingLine> */}
       </Heading>
       <MainUseCaseRow>
-        <MainUseCase>Books</MainUseCase>
-        <MainUseCase highlighted>Code</MainUseCase>
+        {/* <MainUseCase>Books</MainUseCase> */}
+        <MainUseCase highlighted>Instant Apps</MainUseCase>
       </MainUseCaseRow>
       <CodeUseCaseExample>
-        <CodeSearchBox>
+        {/* <CodeSearchBox>
           <img src="/search_icon.svg" /> merge sort in javascript
-        </CodeSearchBox>
-        <MySyntaxHighlighter
+        </CodeSearchBox> */}
+        {/* <MySyntaxHighlighter
           language="javascript"
           style={a11yDark}
           wrapLongLines={true}
           customStyle={{ padding: "2rem", overflowX: "hidden" }}
         >
           {CodeSnippet}
-        </MySyntaxHighlighter>
+        </MySyntaxHighlighter> */}
+
+        <Cards>
+          <Swiper
+            effect={"coverflow"}
+            grabCursor={true}
+            centeredSlides={true}
+            slidesPerView={2}
+            loop="true"
+            coverflowEffect={{
+              rotate: 50,
+              stretch: 0,
+              depth: 100,
+              modifier: 1,
+              slideShadows: true,
+            }}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            pagination={true}
+            modules={[EffectCoverflow, Pagination, Autoplay]}
+            className="mySwiper"
+          >
+           
+            <SwiperSlide>
+              <img src="https://i.ibb.co/SQW6NP3/Screenshot-2022-05-02-at-2-32-42-AM.png" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/ssjk8S7/Screenshot-2022-05-02-at-12-22-16-PM.png" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/gJvXVLt/Screenshot-2022-05-02-at-2-33-00-AM.png" />
+            </SwiperSlide>
+            <SwiperSlide>
+              <img src="https://i.ibb.co/QYDK4NR/Screenshot-2022-05-02-at-2-33-20-AM.png" />
+            </SwiperSlide>
+            
+          </Swiper>
+        </Cards>
       </CodeUseCaseExample>
       <FancyTextArea>
         <FancyText1>more</FancyText1>

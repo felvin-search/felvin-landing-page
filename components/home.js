@@ -176,7 +176,7 @@ export default function Home() {
           />
         </IframeContainer> */}
 
-        <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline" />
+        {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline" /> */}
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
