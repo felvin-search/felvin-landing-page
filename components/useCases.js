@@ -1,6 +1,6 @@
 import styled from "styled-components";
-import SyntaxHighlighter from "react-syntax-highlighter";
-import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
+// import SyntaxHighlighter from "react-syntax-highlighter";
+// import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
 // import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -127,14 +127,14 @@ const CodeSearchBox = styled.div`
   padding: 2rem;
 `;
 
-const MySyntaxHighlighter = styled(SyntaxHighlighter)`
-  border-radius: 30px;
-  background: rgba(255, 255, 255, 0.1);
-  width: clamp(300px, 600px, 90%);
-  height: 50vh;
-  overflow-y: auto;
-  -webkit-scrollbar: none;
-`;
+// const MySyntaxHighlighter = styled(SyntaxHighlighter)`
+//   border-radius: 30px;
+//   background: rgba(255, 255, 255, 0.1);
+//   width: clamp(300px, 600px, 90%);
+//   height: 50vh;
+//   overflow-y: auto;
+//   -webkit-scrollbar: none;
+// `;
 
 const CodeSnippet = `/*
 * MergeSort implementation.
@@ -271,8 +271,10 @@ const UseCasePill = styled(Pill)`
 `;
 const Cards = styled.div`
   // background: rgba(255, 255, 255, 0.1);
-  width: 85%;
+  width: 100%;
+  overflow: hidden;
   padding: 5rem;
+ 
 `;
 
 const SwiperContainer=styled(Swiper)`
