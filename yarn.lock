@@ -291,26 +291,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@splinetool/react-spline@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@splinetool/react-spline@npm:2.1.0"
-  peerDependencies:
-    "@splinetool/runtime": "*"
-    react: ">=17.0.0"
-    react-dom: ">=17.0.0"
-  checksum: 93825f160a63988151a053494a5ecad12f9ca45bb34a40ec319d299ab3fe066e37969f1608ff42461cb605a9792deecfdaa38df0b9f17729e63896bb01de1393
-  languageName: node
-  linkType: hard
-
-"@splinetool/runtime@npm:^0.9.37":
-  version: 0.9.37
-  resolution: "@splinetool/runtime@npm:0.9.37"
-  dependencies:
-    on-change: ^4.0.0
-  checksum: 7db612ed8b94dd2f8701dac6eb14662651b1896bc1b8a119bea4dee26d3af4f956b22573c873323c02f1ea4f11f890a75de5e386eb540963fa493b2daca3ed4f
-  languageName: node
-  linkType: hard
-
 "ansi-styles@npm:^3.2.1":
   version: 3.2.1
   resolution: "ansi-styles@npm:3.2.1"
@@ -573,13 +553,6 @@ next@latest:
   languageName: node
   linkType: hard
 
-"on-change@npm:^4.0.0":
-  version: 4.0.0
-  resolution: "on-change@npm:4.0.0"
-  checksum: 9db8fea776655b3d7ff5c9f3d0f54ff92c972bb3b72374ad5f6d8abf77823d8c474334cff6c7f3f68e3a80b8d437f7c10c70075c55f62cdb6f785c15299fc93b
-  languageName: node
-  linkType: hard
-
 "picocolors@npm:^1.0.0":
   version: 1.0.0
   resolution: "picocolors@npm:1.0.0"
@@ -661,17 +634,6 @@ next@latest:
   languageName: node
   linkType: hard
 
-"react-spline@npm:^1.2.1":
-  version: 1.2.1
-  resolution: "react-spline@npm:1.2.1"
-  dependencies:
-    three: 0.123.0
-  peerDependencies:
-    react: ^16.0.0
-  checksum: 14f93d3f1ef3846af169e3ca1e0d01d4986517824e3c9d2755986749efe35ea2db7f7e3ca2f66e066cabad55d0b56954ce3f5b2b7f13aeb9f1e26a971dcd41d1
-  languageName: node
-  linkType: hard
-
 "react@npm:^17.0.2":
   version: 17.0.2
   resolution: "react@npm:17.0.2"
@@ -686,14 +648,11 @@ next@latest:
   version: 0.0.0-use.local
   resolution: "root-workspace-0b6124@workspace:."
   dependencies:
-    "@splinetool/react-spline": ^2.1.0
-    "@splinetool/runtime": ^0.9.37
     next: latest
     react: ^17.0.2
     react-dom: ^17.0.2
     react-feather: ^2.0.9
     react-is: ^17.0.2
-    react-spline: ^1.2.1
     styled-components: ^5.2.3
     swiper: ^8.1.4
   languageName: unknown
@@ -782,13 +741,6 @@ next@latest:
     dom7: ^4.0.4
     ssr-window: ^4.0.2
   checksum: d635748ef1de88d6c112b8f04f3500a94a787ca64c405c48e5c02c3a18235b373fe56f26d4b9d5ffa8e2961c03129cb9993e003374988a1c54d145a605ab7b10
-  languageName: node
-  linkType: hard
-
-"three@npm:0.123.0":
-  version: 0.123.0
-  resolution: "three@npm:0.123.0"
-  checksum: aeb781cc962ab07b3eb53e0f3f1e0875b125d304ac5dfc884600979bf2b0650b5cdadf790dfaad12d613d32a2499b96514f25ba4aa72674d45cc037e7d154164
   languageName: node
   linkType: hard
 

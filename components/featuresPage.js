@@ -1,9 +1,5 @@
 import styled from "styled-components";
-import dynamic from "next/dynamic";
 
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-});
 
 const FeaturesPageStyles = styled.div`
   min-height: 100vh;
@@ -102,29 +98,13 @@ const EmptyHalf = styled.div`
   width: 100%;
 `;
 
-const BackgroundSpline = styled(Spline)`
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-  object-fit: contain;
-  & canvas {
-    height: 300px;
-    width: 300px;
-    position: absolute;
-    top: 40%;
-    left: 70%;
-    transform: translate(-50%, -50%);
-  }
-`;
 const FeatureImage = styled.img`
   position: absolute;
   display: block;
   top: 0;
   right: 0;
   overflow: hidden;
-  height: clamp(10rem,50vw,15rem);
+  height: clamp(10rem, 50vw, 15rem);
   aspect-ratio: 1;
 `;
 const FeatureImage1 = styled(FeatureImage)`

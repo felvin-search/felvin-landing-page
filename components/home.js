@@ -2,11 +2,9 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Header from "./header";
 import HeroArea from "./heroArea";
-import dynamic from "next/dynamic";
+
 import { Comp4 } from "./header";
-const Spline = dynamic(() => import("@splinetool/react-spline"), {
-  ssr: false,
-});
+
 const LinkExternal = styled.a`
   text-decoration: none;
 `;
@@ -45,24 +43,6 @@ const HeroStyle = styled.div`
   } */
 `;
 
-const BackgroundSpline = styled(Spline)`
-  z-index: -1;
-  position: absolute;
-  display: block;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-
-  & canvas {
-    touch-action: none;
-    height: 600px;
-    width: 600px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-  }
-`;
 const BackgroundSpline1 = styled.iframe`
   pointer-events: none;
   z-index: -1;
@@ -167,30 +147,17 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
-        {/* <IframeContainer>
-          <BackgroundSpline1
-            src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
-            frameborder="0"
-            width="100%"
-            height="100%"
-          />
-        </IframeContainer> */}
-
-        {/* <BackgroundSpline scene="https://prod.spline.design/NalNaI8izLx7QDUW/scene.spline" /> */}
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
           <HeroTextSolid>Engineers</HeroTextSolid>
         </HeroText>
-        {/* <Tagline>
-          Build customisable and community-driven search experiences
-        </Tagline> */}
+
         <SearchForm>
-          {/* <SearchBox placeholder='SEEK AND YOU SHALL FIND...'/>
-                    <SearchButton type='submit' >
-                      <SearchButtonIcon as={Logo.Icon} />
-                    </SearchButton>                     */}
-          <LinkExternal target='_blank' href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
+          <LinkExternal
+            target="_blank"
+            href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
+          >
             <Comp4 hero />
           </LinkExternal>
         </SearchForm>

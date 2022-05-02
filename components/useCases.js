@@ -1,9 +1,6 @@
 import styled from "styled-components";
-// import SyntaxHighlighter from "react-syntax-highlighter";
-// import { a11yDark } from "react-syntax-highlighter/dist/cjs/styles/hljs";
-// import Swiper core and required modules
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import ResizeWeb from "../helpers/windowResize";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -104,86 +101,16 @@ const MainUseCase = styled.span`
 const CodeUseCaseExample = styled.div`
   background: rgba(0, 0, 0, 0.9);
   flex-grow: 1;
-  border-radius: 50px;
+  border-radius: 10px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem;
   margin: 1rem;
   width: 90%;
   z-index: 1;
   font-family: "F37 Jan Regular";
 `;
-
-const CodeSearchBox = styled.div`
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 60px;
-  display: flex;
-  flex-direction: row;
-  align-self: center;
-  gap: 1rem;
-  justify-content: space-around;
-  color: white;
-  padding: 2rem;
-`;
-
-// const MySyntaxHighlighter = styled(SyntaxHighlighter)`
-//   border-radius: 30px;
-//   background: rgba(255, 255, 255, 0.1);
-//   width: clamp(300px, 600px, 90%);
-//   height: 50vh;
-//   overflow-y: auto;
-//   -webkit-scrollbar: none;
-// `;
-
-const CodeSnippet = `/*
-* MergeSort implementation.
-*
-* Merge Sort is an algorithm where the main list is divided down into two half sized lists, which then have merge sort
-* called on these two smaller lists recursively until there is only a sorted list of one.
-*
-* On the way up the recursive calls, the lists will be merged together inserting
-* the smaller value first, creating a larger sorted list.
-*/
-
-/**
-* Sort and merge two given arrays.
-*
-* @param {Array} list1 Sublist to break down.
-* @param {Array} list2 Sublist to break down.
-* @return {Array} The merged list.
-*/
-export function merge (list1, list2) {
-   const results = []
-   let i = 0
-   let j = 0
- 
-   while (i < list1.length && j < list2.length) {
-     if (list1[i] < list2[j]) {
-       results.push(list1[i++])
-     } else {
-       results.push(list2[j++])
-     }
-   }
- 
-   return results.concat(list1.slice(i), list2.slice(j))
- }
- 
- /**
-  * Break down the lists into smaller pieces to be merged.
-  *
-  * @param {Array} list List to be sorted.
-  * @return {Array} The sorted list.
-  */
- export function mergeSort (list) {
-   if (list.length < 2) return list
- 
-   const listHalf = Math.floor(list.length / 2)
-   const subList1 = list.slice(0, listHalf)
-   const subList2 = list.slice(listHalf, list.length)
- 
-   return merge(mergeSort(subList1), mergeSort(subList2))
- }`;
 
 const FancyTextArea = styled.div`
   height: 40vh;
@@ -274,19 +201,8 @@ const Cards = styled.div`
   width: 100%;
   overflow: hidden;
   padding: 5rem;
- 
 `;
-
-const SwiperContainer=styled(Swiper)`
-  width: 100%;
-    padding-top: 50px;
-    padding-bottom: 50px;
-
-
-`
-const SwiperSlides=styled(SwiperSlide)`
-`
-
+//TODO: TO Make responsive silder
 export default function UseCasesPage() {
   return (
     <UseCasesPageStyles>
@@ -299,56 +215,57 @@ export default function UseCasesPage() {
         <MainUseCase highlighted>Instant Apps</MainUseCase>
       </MainUseCaseRow>
       <CodeUseCaseExample>
-        {/* <CodeSearchBox>
-          <img src="/search_icon.svg" /> merge sort in javascript
-        </CodeSearchBox> */}
-        {/* <MySyntaxHighlighter
-          language="javascript"
-          style={a11yDark}
-          wrapLongLines={true}
-          customStyle={{ padding: "2rem", overflowX: "hidden" }}
-        >
-          {CodeSnippet}
-        </MySyntaxHighlighter> */}
+        <Swiper
+          effect={"coverflow"}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={1}
+          breakpoints={{
+            640: {
+              width: 640,
+              slidesPerView: 2,
+              centeredSlides: true,
+            },
 
-        <Cards>
-          <Swiper
-            effect={"coverflow"}
-            grabCursor={true}
-            centeredSlides={true}
-            slidesPerView={2}
-            loop="true"
-            coverflowEffect={{
-              rotate: 50,
-              stretch: 0,
-              depth: 100,
-              modifier: 1,
-              slideShadows: true,
-            }}
-            autoplay={{
-              delay: 2500,
-              disableOnInteraction: false,
-            }}
-            pagination={true}
-            modules={[EffectCoverflow, Pagination, Autoplay]}
-            className="mySwiper"
-          >
-           
-            <SwiperSlide>
-              <img src="https://i.ibb.co/SQW6NP3/Screenshot-2022-05-02-at-2-32-42-AM.png" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://i.ibb.co/ssjk8S7/Screenshot-2022-05-02-at-12-22-16-PM.png" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://i.ibb.co/gJvXVLt/Screenshot-2022-05-02-at-2-33-00-AM.png" />
-            </SwiperSlide>
-            <SwiperSlide>
-              <img src="https://i.ibb.co/QYDK4NR/Screenshot-2022-05-02-at-2-33-20-AM.png" />
-            </SwiperSlide>
-            
-          </Swiper>
-        </Cards>
+            768: {
+              width: 768,
+              slidesPerView: 2,
+              centeredSlides: true,
+            },
+            1024: {
+              width: 1024,
+              slidesPerView: 2,
+            },
+          }}
+          loop="true"
+          coverflowEffect={{
+            rotate: 50,
+            stretch: 0,
+            depth: 100,
+            modifier: 1,
+            slideShadows: true,
+          }}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination, Autoplay]}
+          className="mySwiper"
+        >
+          <SwiperSlide>
+            <img src="https://i.ibb.co/SQW6NP3/Screenshot-2022-05-02-at-2-32-42-AM.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://i.ibb.co/ssjk8S7/Screenshot-2022-05-02-at-12-22-16-PM.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://i.ibb.co/gJvXVLt/Screenshot-2022-05-02-at-2-33-00-AM.png" />
+          </SwiperSlide>
+          <SwiperSlide>
+            <img src="https://i.ibb.co/QYDK4NR/Screenshot-2022-05-02-at-2-33-20-AM.png" />
+          </SwiperSlide>
+        </Swiper>
       </CodeUseCaseExample>
       <FancyTextArea>
         <FancyText1>more</FancyText1>
@@ -357,12 +274,6 @@ export default function UseCasesPage() {
       </FancyTextArea>
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
-        {/* <ExternalLinkPill>
-          <LinkExternal target='_blank' href="https://github.com/felvin-search">
-            <img src="/github_white.svg" /> Fork On Git
-          </LinkExternal>
-        </ExternalLinkPill> */}
-
         <LinkExternal
           target="_blank"
           href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
@@ -371,12 +282,6 @@ export default function UseCasesPage() {
             <img src="/cloud_down.svg" /> Try the Beta
           </ExternalLinkPill>
         </LinkExternal>
-
-        {/* <ExternalLinkPill>
-          <LinkExternal href="https://discord.gg/FNMUavyu">
-            <img src="/diagonal_arrow.svg" /> Submit Ideas
-          </LinkExternal>
-        </ExternalLinkPill> */}
       </ExternalLinkArea>
       <UseCaseArea>
         <UseCaseRow>
