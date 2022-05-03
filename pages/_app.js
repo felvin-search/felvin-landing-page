@@ -1,5 +1,5 @@
 import { createGlobalStyle, ThemeProvider } from 'styled-components'
-
+import "./style.css";
 const GlobalStyle = createGlobalStyle`
   @font-face {
     font-family: "F37 Jan Bold";
