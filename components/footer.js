@@ -150,7 +150,7 @@ const LogoComp = () => {
 const SocialMediaIcons = () => {
   return (
     <SlightlySpacedRow>
-      <LinkExternal href="https://discord.gg/FNMUavyu">
+      <LinkExternal href="https://discord.gg/RUVHg7A9pQ">
         <img src="/discord.svg" />
       </LinkExternal>
       <LinkExternal href="https://twitter.com/FelvinSearch?s=20&t=s88TcfTfEDP8czq8RdUjPQ">
@@ -162,7 +162,7 @@ const SocialMediaIcons = () => {
     </SlightlySpacedRow>
   );
 };
-
+export {SocialMediaIcons};
 const AnchorLinks = () => {
   return (
     <SlightlySpacedRow>

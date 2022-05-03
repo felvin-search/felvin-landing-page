@@ -1,6 +1,5 @@
 import styled from "styled-components";
 
-
 const FeaturesPageStyles = styled.div`
   min-height: 100vh;
   display: flex;
@@ -126,6 +125,22 @@ const FeatureDescriptionHead = styled.h2`
   margin: 0.5rem 0.5rem 0;
 `;
 
+const Button = styled.div`
+  cursor: pointer;
+  border: 2px solid black;
+  width: 7rem;
+  padding: 0.4em 0.8em;
+  text-align: center;
+  border-radius: 4px;
+  margin: auto;
+  margin-top: 1rem;
+  color: white;
+  background: black;
+`;
+const BtnWrapper = ({ link, text }) => (
+  <Button onClick={() => window.open(link, "_blank")}>{text}</Button>
+);
+
 export default function FeaturesPage() {
   return (
     <FeaturesPageStyles>
@@ -140,9 +155,13 @@ export default function FeaturesPage() {
             <FeatureDescriptionHead>Open Source</FeatureDescriptionHead>
             <FeatureDescriptionBody>
               All the instant apps you see on the website are open source. Find
-              the repository here: https://github.com/felvin-search/instant-apps
+              the repository here:
             </FeatureDescriptionBody>
           </FeatureDescription>
+          <BtnWrapper
+            link="https://github.com/felvin-search/instant-apps"
+            text="FORK"
+          />
         </FeatureBox>
         <FeatureBox2>
           <EmptyHalf>
@@ -152,10 +171,10 @@ export default function FeaturesPage() {
           <FeatureDescription>
             <FeatureDescriptionHead>Community Driven</FeatureDescriptionHead>
             <FeatureDescriptionBody>
-              Instant apps are created by the small but mighty Felvin community.
-              Drive the best results with their help.
+              Join us on discord and build awesome search experiences
             </FeatureDescriptionBody>
           </FeatureDescription>
+          <BtnWrapper link="https://discord.gg/RUVHg7A9pQ" text="DISCORD" />
         </FeatureBox2>
         <FeatureBox3>
           <EmptyHalf>
@@ -169,6 +188,10 @@ export default function FeaturesPage() {
               Make search what you want it to be.
             </FeatureDescriptionBody>
           </FeatureDescription>
+          <BtnWrapper
+            link="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
+            text="TRY BETA"
+          />
         </FeatureBox3>
       </FeaturesAreaStyles>
     </FeaturesPageStyles>

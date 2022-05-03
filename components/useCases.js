@@ -171,7 +171,12 @@ const Pill = styled.div`
   border-radius: 50px;
   padding: 0.6rem 1.2rem;
   font-size: 0.8rem;
-`;
+  @media (max-width:480px){
+     font-size: 0.6rem;
+  }
+    
+  
+`
 
 const ExternalLinkPill = styled(Pill)`
   font-size: 0.7rem;
@@ -180,6 +185,7 @@ const ExternalLinkPill = styled(Pill)`
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 `;
 
@@ -196,6 +202,7 @@ const UseCaseRow = styled(ExternalLinkArea)`
 
 const UseCasePill = styled(Pill)`
   background-color: #e8e8e8;
+  
   color: #232323;
 `;
 const Cards = styled.div`
