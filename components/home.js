@@ -33,6 +33,7 @@ const HeroStyle = styled.div`
   justify-content: center;
   flex: 1 0 auto;
   z-index: 10;
+  overflow: hidden;
   /* & canvas {
     height: 600px;
     width: 600px;
@@ -140,18 +141,25 @@ const SearchButtonIcon = styled.svg`
   height: 36px;
   width: 36px;
 `;
-const IframeCotainer = styled.iframe`
+const Iframe = styled.iframe`
   height: 600px;
   width: 600px;
   position: absolute;
   z-index: -1;
   border: none;
   pointer-events: none;
+  @media (max-width:600px){
+    height: 100%;
+    width: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+  }
 `;
 const ImageContaner = styled.div`
   position: absolute;
   width: 10rem;
- 
+
   z-index: -1;
 `;
 const Image = styled.img`
@@ -165,7 +173,11 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
-        <IframeCotainer src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/" />
+        <Iframe
+          height="100%"
+          width="100%"
+          src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
+        />
         {/* <ImageContaner>
           <Image src="/bg.png" />
         </ImageContaner> */}

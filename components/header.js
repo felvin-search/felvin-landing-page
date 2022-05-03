@@ -102,7 +102,7 @@ const BetaButtonStyle = styled.div`
   color: #faf9f9;
   text-transform: uppercase;
   @media (max-width: 400px) {
-    font-size: 0.5rem;
+    font-size: 1rem;
     padding: 0.5rem;
   }
 `;
