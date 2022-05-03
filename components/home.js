@@ -147,7 +147,16 @@ const IframeCotainer = styled.iframe`
   z-index: -1;
   border: none;
   pointer-events: none;
-  
+`;
+const ImageContaner = styled.div`
+  position: absolute;
+  width: 10rem;
+ 
+  z-index: -1;
+`;
+const Image = styled.img`
+  height: 100%;
+  width: 100%;
 `;
 
 // TODO: Make the image come out fine
@@ -157,6 +166,9 @@ export default function Home() {
       <Header />
       <HeroStyle>
         <IframeCotainer src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/" />
+        {/* <ImageContaner>
+          <Image src="/bg.png" />
+        </ImageContaner> */}
 
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
