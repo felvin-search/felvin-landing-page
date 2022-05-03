@@ -181,6 +181,7 @@ export default function Home() {
         {/* <ImageContaner>
           <Image src="/bg.png" />
         </ImageContaner> */}
+        
 
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
