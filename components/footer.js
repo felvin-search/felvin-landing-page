@@ -137,6 +137,12 @@ const SlightlySpacedRow = styled(CloseRow)`
     gap: 0.4rem;
   }
 `;
+const CopyRight=styled.h6`
+   color: #000;
+   z-index: 2;
+   font-size: 1rem;
+
+`
 
 const LogoComp = () => {
   return (
@@ -198,6 +204,9 @@ export default function Footer() {
         <AnchorLinks />
         <SocialMediaIcons />
       </LinkArea>
+      <CopyRight>
+      © 2022 WOW21, Inc. dba Felvin
+      </CopyRight>
     </FooterStyles>
   );
 }
