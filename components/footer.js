@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 
+const waitListLink = "https://1q5tgm1f657.typeform.com/to/E96ETDuz";
+
 const FooterStyles = styled.footer`
   position: relative;
   min-height: 50vh;
@@ -182,8 +184,8 @@ export default function Footer() {
     <FooterStyles>
       <MainText>start building with felvin</MainText>
       <PillArea>
-        <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
-          <Pill>Try Beta</Pill>
+        <LinkExternal href={waitListLink}>
+          <Pill>Join Waitlist</Pill>
         </LinkExternal>
         {/* <LinkExternal href="https://github.com/felvin-search">
           <Pill>Fork on Git</Pill>

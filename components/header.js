@@ -107,7 +107,7 @@ const BetaButtonStyle = styled.div`
   }
 `;
 const Comp4 = () => {
-  return <BetaButtonStyle>Try Beta</BetaButtonStyle>;
+  return <BetaButtonStyle>Join Waitlist</BetaButtonStyle>;
 };
 export { Comp4 };
 

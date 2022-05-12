@@ -6,6 +6,8 @@ import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
 
+const waitListLink = "https://1q5tgm1f657.typeform.com/to/E96ETDuz";
+
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
 const UseCasesPageStyles = styled.div`
@@ -286,10 +288,10 @@ export default function UseCasesPage() {
       <ExternalLinkArea>
         <LinkExternal
           target="_blank"
-          href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
+          href={waitListLink}
         >
           <ExternalLinkPill>
-            <img src="/cloud_down.svg" /> Try the Beta
+            <img src="/cloud_down.svg" /> Join Waitlist
           </ExternalLinkPill>
         </LinkExternal>
       </ExternalLinkArea>

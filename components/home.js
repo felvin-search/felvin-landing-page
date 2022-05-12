@@ -4,6 +4,7 @@ import Header from "./header";
 import HeroArea from "./heroArea";
 
 import { Comp4 } from "./header";
+const waitListLink = "https://1q5tgm1f657.typeform.com/to/E96ETDuz";
 
 const LinkExternal = styled.a`
   text-decoration: none;
@@ -192,7 +193,7 @@ export default function Home() {
         <SearchForm>
           <LinkExternal
             target="_blank"
-            href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
+            href={waitListLink}
           >
             <Comp4 hero />
           </LinkExternal>
