@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ResizeWeb from "../helpers/windowResize";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import WishlistBar from "./Wishlist";
 const UseCasesPageStyles = styled.div`
   background-color: #1a1a1a;
   min-height: 100vh;
@@ -291,14 +292,7 @@ export default function UseCasesPage() {
       </FancyTextArea>
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
-        <LinkExternal
-          target="_blank"
-          href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
-        >
-          <ExternalLinkPill>
-            <img src="/cloud_down.svg" /> Try the Beta
-          </ExternalLinkPill>
-        </LinkExternal>
+        <WishlistBar/>
       </ExternalLinkArea>
       <UseCaseArea>
         <UseCaseRow>

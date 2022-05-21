@@ -124,7 +124,7 @@ const LogoText = styled.svg`
   width: 87px;
 `;
 const CloseRow = styled.div`
-justify-content: center;
+  justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -135,17 +135,16 @@ justify-content: center;
 
 const SlightlySpacedRow = styled(CloseRow)`
   gap: 0.8rem;
-  
+
   @media (max-width: 650px) {
     gap: 0.4rem;
   }
 `;
-const CopyRight=styled.h6`
-   color: #000;
-   z-index: 2;
-   
+const CopyRight = styled.h6`
+  color: #000;
 
-`
+  z-index: 2;
+`;
 
 const LogoComp = () => {
   return (
@@ -171,7 +170,7 @@ const SocialMediaIcons = () => {
     </SlightlySpacedRow>
   );
 };
-export {SocialMediaIcons};
+export { SocialMediaIcons };
 const AnchorLinks = () => {
   return (
     <SlightlySpacedRow>
@@ -207,9 +206,7 @@ export default function Footer() {
         <AnchorLinks />
         <SocialMediaIcons />
       </LinkArea>
-      <CopyRight>
-      © 2022 WOW21, Inc. dba Felvin
-      </CopyRight>
+      <CopyRight>© 2022 WOW21, Inc. dba Felvin</CopyRight>
     </FooterStyles>
   );
 }

@@ -55,8 +55,9 @@ const FeaturesAreaStyles = styled.div`
 const FeatureBox = styled.div`
   border-radius: 50px;
   width: clamp(200px, 28vw, 400px);
-  height: 50vh;
+  height: 55vh;
   overflow: hidden;
+  
   background-image: radial-gradient(
     farthest-corner at 75px 100px,
     hsla(326, 100%, 80%, 1) 0%,
@@ -65,11 +66,12 @@ const FeatureBox = styled.div`
   );
   @media (max-width: 900px) {
     width: clamp(200px, 30vw, 400px);
-    height: 55vh;
+    /* height: 55vh; */
   }
   @media (max-width: 650px) {
     width: clamp(200px, 400px, 80vw);
-    height: 50vh;
+    /* height: 50vh; */
+   
   }
 `;
 
@@ -134,6 +136,7 @@ const Button = styled.div`
   border-radius: 4px;
   margin: auto;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   color: white;
   background: black;
 `;
@@ -188,10 +191,7 @@ export default function FeaturesPage() {
               Make search what you want it to be.
             </FeatureDescriptionBody>
           </FeatureDescription>
-          <BtnWrapper
-            link="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
-            text="TRY BETA"
-          />
+
         </FeatureBox3>
       </FeaturesAreaStyles>
     </FeaturesPageStyles>
