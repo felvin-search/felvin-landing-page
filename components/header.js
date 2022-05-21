@@ -106,8 +106,8 @@ const BetaButtonStyle = styled.div`
     padding: 0.5rem;
   }
 `;
-const Comp4 = () => {
-  return <BetaButtonStyle>Try Beta</BetaButtonStyle>;
+const Comp4 = ({text}) => {
+  return <BetaButtonStyle>{text}</BetaButtonStyle>;
 };
 export { Comp4 };
 

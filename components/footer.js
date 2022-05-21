@@ -100,8 +100,9 @@ const LinkArea = styled.div`
   width: 100%;
   margin-top: auto;
   display: flex;
-  justify-content: space-between;
+  //grid-template-columns: repeat(3,1fr);
   padding: 2rem;
+  justify-content: space-between;
   z-index: 1;
   @media (max-width: 650px) {
     padding-left: 1rem;
@@ -123,6 +124,7 @@ const LogoText = styled.svg`
   width: 87px;
 `;
 const CloseRow = styled.div`
+justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,6 +135,7 @@ const CloseRow = styled.div`
 
 const SlightlySpacedRow = styled(CloseRow)`
   gap: 0.8rem;
+  
   @media (max-width: 650px) {
     gap: 0.4rem;
   }
@@ -140,7 +143,7 @@ const SlightlySpacedRow = styled(CloseRow)`
 const CopyRight=styled.h6`
    color: #000;
    z-index: 2;
-   font-size: 1rem;
+   
 
 `
 

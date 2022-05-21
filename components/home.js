@@ -3,7 +3,7 @@ import Logo from "./Logo";
 import Header from "./header";
 import HeroArea from "./heroArea";
 
-import { Comp4 } from "./header";
+
 
 const LinkExternal = styled.a`
   text-decoration: none;
@@ -101,10 +101,6 @@ const Tagline = styled.h2`
   line-height: 1.5rem;
 `;
 
-const SearchForm = styled.form`
-  position: relative;
-`;
-
 const SearchBox = styled.input`
   padding: 1.5rem;
   padding-right: 55px;
@@ -148,12 +144,12 @@ const Iframe = styled.iframe`
   z-index: -1;
   border: none;
   pointer-events: none;
-  @media (max-width:600px){
+  @media (max-width: 600px) {
     height: 100%;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
 `;
 const ImageContaner = styled.div`
@@ -165,6 +161,36 @@ const ImageContaner = styled.div`
 const Image = styled.img`
   height: 100%;
   width: 100%;
+`;
+const SearchForm = styled.form`
+  margin-top: 1rem;
+  position: relative;
+  display: flex;
+  border: black solid 2px;
+  border-radius: 3rem;
+  overflow: hidden;
+  background: white;
+`;
+
+const Input = styled.input`
+  border: none;
+  padding-left: 2rem;
+  font-size: larger;
+  background: transparent;
+  color: black;
+  width: 25rem;
+  & :focus{
+    outline: none;
+  }
+ 
+`;
+const Wishlist = styled.div`
+ padding: 1em;
+ font-size: larger;
+ border-radius: 2rem;
+ cursor: pointer;
+ background-color: black;
+ color: white;
 `;
 
 // TODO: Make the image come out fine
@@ -178,11 +204,6 @@ export default function Home() {
           width="100%"
           src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
         />
-        {/* <ImageContaner>
-          <Image src="/bg.png" />
-        </ImageContaner> */}
-        
-
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
@@ -190,12 +211,8 @@ export default function Home() {
         </HeroText>
 
         <SearchForm>
-          <LinkExternal
-            target="_blank"
-            href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
-          >
-            <Comp4 hero />
-          </LinkExternal>
+          <Input placeholder="Enter Your Email" />
+          <Wishlist>Get early access</Wishlist>
         </SearchForm>
       </HeroStyle>
     </HomeStyle>
