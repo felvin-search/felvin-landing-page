@@ -1,12 +1,16 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-import updateSheetValues from "../helpers/updateSheet";
+
 import styled from "styled-components";
-const SearchForm = styled.form`
+import SubmitEmail from "../helpers/updateSheet";
+import updateSheetValues from "../helpers/updateSheet";
+const SearchForm = styled.div`
   margin-top: 1rem;
+  padding: 0;
+  outline: none;
   position: relative;
   display: flex;
-  border: black solid 1px;
+  border: black solid 1.2px;
   border-radius: 3rem;
   height: 3.8rem;
   width: clamp(20rem, 40vw, 35rem);
@@ -22,7 +26,7 @@ const Input = styled(motion.input)`
   color: black;
   height: 100%;
   width: 60%;
-  & :focus {
+  &:focus {
     outline: none;
   }
 `;
@@ -49,8 +53,9 @@ function WishlistBar() {
     if (email.length) {
       setClicked(true);
       sequence();
-      updateSheetValues(email);
+      SubmitEmail(email)
     }
+    
   };
   const sequence = async () => {
     await controls1.start({ width: 0 });
