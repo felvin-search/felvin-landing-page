@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Logo from "./Logo";
+import WishlistBar from "./Wishlist";
 
 const FooterStyles = styled.footer`
   position: relative;
@@ -100,8 +101,9 @@ const LinkArea = styled.div`
   width: 100%;
   margin-top: auto;
   display: flex;
-  justify-content: space-between;
+  //grid-template-columns: repeat(3,1fr);
   padding: 2rem;
+  justify-content: space-between;
   z-index: 1;
   @media (max-width: 650px) {
     padding-left: 1rem;
@@ -123,6 +125,7 @@ const LogoText = styled.svg`
   width: 87px;
 `;
 const CloseRow = styled.div`
+  justify-content: center;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -133,9 +136,16 @@ const CloseRow = styled.div`
 
 const SlightlySpacedRow = styled(CloseRow)`
   gap: 0.8rem;
+
   @media (max-width: 650px) {
     gap: 0.4rem;
   }
+`;
+const CopyRight = styled.h6`
+  color: #000;
+  margin-right: auto;
+  margin-left: 2rem;
+  z-index: 2;
 `;
 
 const LogoComp = () => {
@@ -150,7 +160,7 @@ const LogoComp = () => {
 const SocialMediaIcons = () => {
   return (
     <SlightlySpacedRow>
-      <LinkExternal href="https://discord.gg/FNMUavyu">
+      <LinkExternal href="https://discord.gg/RUVHg7A9pQ">
         <img src="/discord.svg" />
       </LinkExternal>
       <LinkExternal href="https://twitter.com/FelvinSearch?s=20&t=s88TcfTfEDP8czq8RdUjPQ">
@@ -162,7 +172,7 @@ const SocialMediaIcons = () => {
     </SlightlySpacedRow>
   );
 };
-
+export { SocialMediaIcons };
 const AnchorLinks = () => {
   return (
     <SlightlySpacedRow>
@@ -182,9 +192,8 @@ export default function Footer() {
     <FooterStyles>
       <MainText>start building with felvin</MainText>
       <PillArea>
-        <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
-          <Pill>Try Beta</Pill>
-        </LinkExternal>
+        <WishlistBar />
+
         {/* <LinkExternal href="https://github.com/felvin-search">
           <Pill>Fork on Git</Pill>
         </LinkExternal> */}
@@ -198,6 +207,7 @@ export default function Footer() {
         <AnchorLinks />
         <SocialMediaIcons />
       </LinkArea>
+      <CopyRight>© 2022 WOW21, Inc. dba Felvin</CopyRight>
     </FooterStyles>
   );
 }

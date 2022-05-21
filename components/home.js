@@ -2,8 +2,10 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Header from "./header";
 import HeroArea from "./heroArea";
-
-import { Comp4 } from "./header";
+import { motion, useAnimation } from "framer-motion";
+import { useEffect, useState } from "react";
+import updateSheetValues from "../helpers/updateSheet";
+import WishlistBar from "./Wishlist";
 
 const LinkExternal = styled.a`
   text-decoration: none;
@@ -101,10 +103,6 @@ const Tagline = styled.h2`
   line-height: 1.5rem;
 `;
 
-const SearchForm = styled.form`
-  position: relative;
-`;
-
 const SearchBox = styled.input`
   padding: 1.5rem;
   padding-right: 55px;
@@ -148,23 +146,13 @@ const Iframe = styled.iframe`
   z-index: -1;
   border: none;
   pointer-events: none;
-  @media (max-width:600px){
+  @media (max-width: 600px) {
     height: 100%;
     width: 100%;
     top: 50%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%, -50%);
   }
-`;
-const ImageContaner = styled.div`
-  position: absolute;
-  width: 10rem;
-
-  z-index: -1;
-`;
-const Image = styled.img`
-  height: 100%;
-  width: 100%;
 `;
 
 // TODO: Make the image come out fine
@@ -178,25 +166,13 @@ export default function Home() {
           width="100%"
           src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
         />
-        {/* <ImageContaner>
-          <Image src="/bg.png" />
-        </ImageContaner> */}
-        
-
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
           <HeroTextSolid>Engineers</HeroTextSolid>
         </HeroText>
 
-        <SearchForm>
-          <LinkExternal
-            target="_blank"
-            href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
-          >
-            <Comp4 hero />
-          </LinkExternal>
-        </SearchForm>
+        <WishlistBar />
       </HeroStyle>
     </HomeStyle>
   );

@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-import ResizeWeb from "../helpers/windowResize";
+
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/effect-coverflow";
@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 
 // import required modules
 import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import WishlistBar from "./Wishlist";
 const UseCasesPageStyles = styled.div`
   background-color: #1a1a1a;
   min-height: 100vh;
@@ -171,7 +172,12 @@ const Pill = styled.div`
   border-radius: 50px;
   padding: 0.6rem 1.2rem;
   font-size: 0.8rem;
-`;
+  @media (max-width:480px){
+     font-size: 0.6rem;
+  }
+    
+  
+`
 
 const ExternalLinkPill = styled(Pill)`
   font-size: 0.7rem;
@@ -180,6 +186,7 @@ const ExternalLinkPill = styled(Pill)`
   color: white;
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.5rem;
 `;
 
@@ -196,6 +203,7 @@ const UseCaseRow = styled(ExternalLinkArea)`
 
 const UseCasePill = styled(Pill)`
   background-color: #e8e8e8;
+  
   color: #232323;
 `;
 const Cards = styled.div`
@@ -284,14 +292,7 @@ export default function UseCasesPage() {
       </FancyTextArea>
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
-        <LinkExternal
-          target="_blank"
-          href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en"
-        >
-          <ExternalLinkPill>
-            <img src="/cloud_down.svg" /> Try the Beta
-          </ExternalLinkPill>
-        </LinkExternal>
+        <WishlistBar/>
       </ExternalLinkArea>
       <UseCaseArea>
         <UseCaseRow>

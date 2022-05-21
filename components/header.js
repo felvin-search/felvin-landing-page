@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import Icons from "./Icons";
-
+import { SocialMediaIcons } from "./footer";
 const HeaderStyle = styled.div`
   /* height: 140px; */
   display: flex;
@@ -106,8 +106,8 @@ const BetaButtonStyle = styled.div`
     padding: 0.5rem;
   }
 `;
-const Comp4 = () => {
-  return <BetaButtonStyle>Try Beta</BetaButtonStyle>;
+const Comp4 = ({text}) => {
+  return <BetaButtonStyle>{text}</BetaButtonStyle>;
 };
 export { Comp4 };
 
@@ -120,6 +120,8 @@ const RightSection = styled.div`
   display: flex;
   flex-direction: row;
   align-items: center;
+  margin-right: 1rem;
+  margin-top: 1rem;
 `;
 
 export default function Header() {
@@ -130,7 +132,8 @@ export default function Header() {
       </LeftSection>
       <RightSection>
         
-          <Comp2 />
+          {/* <Comp2 /> */}
+          <SocialMediaIcons/>
        
         {/* <LinkExternal href="https://github.com/felvin-search">
           <Comp3 />
