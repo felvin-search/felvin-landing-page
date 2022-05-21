@@ -1,10 +1,9 @@
 import { motion, useAnimation } from "framer-motion";
 import { useEffect, useState } from "react";
-
 import styled from "styled-components";
 import SubmitEmail from "../helpers/updateSheet";
-import updateSheetValues from "../helpers/updateSheet";
-const SearchForm = styled.div`
+
+const SearchForm = styled.form`
   margin-top: 1rem;
   padding: 0;
   outline: none;
@@ -30,8 +29,8 @@ const Input = styled(motion.input)`
     outline: none;
   }
 `;
-const Wishlist = styled(motion.div)`
-  //padding: 1em;
+const Wishlist = styled(motion.button)`
+  border: none;
   font-size: larger;
   border-radius: 2rem;
   margin-left: auto;
@@ -49,13 +48,13 @@ function WishlistBar() {
   const controls2 = useAnimation();
   const [clicked, setClicked] = useState(false);
   const [email, setEmail] = useState("");
-  const handleWishlist = () => {
+  const handleWishlist = (e) => {
+    e.preventDefault();
     if (email.length) {
       setClicked(true);
       sequence();
-      SubmitEmail(email)
+      SubmitEmail(email);
     }
-    
   };
   const sequence = async () => {
     await controls1.start({ width: 0 });
@@ -63,10 +62,10 @@ function WishlistBar() {
     return await controls1.start({ display: "none" });
   };
   return (
-    <SearchForm>
+    <SearchForm onSubmit={(e)=>handleWishlist(e)}>
       <Input
         animate={controls1}
-        transition={{ duration: 0.1 }}
+        transition={{ duration: 0.05 }}
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
@@ -74,8 +73,8 @@ function WishlistBar() {
       />
       <Wishlist
         animate={controls2}
-        transition={{ duration: 0.4 }}
-        onClick={handleWishlist}
+        transition={{ duration: 0.2 }}
+        type="submit"
       >
         {!clicked ? "Get early access" : "You are now on the list 😎"}
       </Wishlist>
