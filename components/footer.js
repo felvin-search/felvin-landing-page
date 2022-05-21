@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import Logo from "./Logo";
+import WishlistBar from "./Wishlist";
 
 const FooterStyles = styled.footer`
   position: relative;
@@ -142,7 +143,8 @@ const SlightlySpacedRow = styled(CloseRow)`
 `;
 const CopyRight = styled.h6`
   color: #000;
-
+  margin-right: auto;
+  margin-left: 2rem;
   z-index: 2;
 `;
 
@@ -190,9 +192,8 @@ export default function Footer() {
     <FooterStyles>
       <MainText>start building with felvin</MainText>
       <PillArea>
-        <LinkExternal href="https://chrome.google.com/webstore/detail/felvin-google-search-enha/dmhgpjahhfannndnaghleelgnpieiljl?hl=en">
-          <Pill>Try Beta</Pill>
-        </LinkExternal>
+        <WishlistBar />
+
         {/* <LinkExternal href="https://github.com/felvin-search">
           <Pill>Fork on Git</Pill>
         </LinkExternal> */}
