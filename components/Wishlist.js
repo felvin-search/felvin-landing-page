@@ -73,7 +73,7 @@ function WishlistBar() {
       />
       <Wishlist
         animate={controls2}
-        transition={{ duration: 0.2 }}
+        transition={{ duration: 0.3 }}
         type="submit"
       >
         {!clicked ? "Get early access" : "You are now on the list 😎"}
