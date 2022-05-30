@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Header from "./header";
 import HeroArea from "./heroArea";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import updateSheetValues from "../helpers/updateSheet";
 import WishlistBar from "./Wishlist";
 
+import isMobile from "../helpers/isMobile";
+console.log(isMobile());
 const LinkExternal = styled.a`
   text-decoration: none;
 `;
@@ -161,11 +160,14 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
-        <Iframe
-          height="100%"
-          width="100%"
-          src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
-        />
+        {!isMobile() && (
+          <Iframe
+            height="100%"
+            width="100%"
+            src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
+          />
+        )}
+
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
