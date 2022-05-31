@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Logo from "./Logo";
 import Header from "./header";
 import HeroArea from "./heroArea";
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
-import updateSheetValues from "../helpers/updateSheet";
 import WishlistBar from "./Wishlist";
 
+import isMobile from "../helpers/isMobile";
+console.log(isMobile());
 const LinkExternal = styled.a`
   text-decoration: none;
 `;
@@ -31,6 +30,7 @@ const HeroStyle = styled.div`
   text-align: center;
   display: flex;
   flex-direction: column;
+  width: 100%;
   align-items: center;
   justify-content: center;
   flex: 1 0 auto;
@@ -154,6 +154,21 @@ const Iframe = styled.iframe`
     transform: translate(-50%, -50%);
   }
 `;
+const ImageContainer = styled.div`
+  position: relative;
+
+`;
+const Image = styled.img`
+  position: absolute;
+  z-index: -1;
+  height: 85%;
+  width: 100%;
+  max-width: 450px;
+  max-height: 450px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+`;
 
 // TODO: Make the image come out fine
 export default function Home() {
@@ -161,17 +176,23 @@ export default function Home() {
     <HomeStyle>
       <Header />
       <HeroStyle>
-        <Iframe
-          height="100%"
-          width="100%"
-          src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
-        />
+        {!isMobile() ? (
+          <Iframe
+            height="100%"
+            width="100%"
+            src="https://my.spline.design/scene-4c1f8b8ea6669d4e8fa0c0f82115a3e9/"
+          />
+        ) : (
+          <ImageContainer>
+            <Image src="/bg1.png" />
+          </ImageContainer>
+        )}
+
         <HeroText>
           <HeroTextTransparent>Search Engine</HeroTextTransparent>
           <HeroTextTransparent>For</HeroTextTransparent>
           <HeroTextSolid>Engineers</HeroTextSolid>
         </HeroText>
-
         <WishlistBar />
       </HeroStyle>
     </HomeStyle>
