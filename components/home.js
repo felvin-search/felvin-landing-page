@@ -69,7 +69,6 @@ const ReactPlayerStyle = styled(ReactPlayer)`
   width: 100%;
   z-index: 3;
   position: relative;
-  margin-top: 1rem;
   max-width: 1153px;
   aspect-ratio: 2306 / 1372;
 `;
