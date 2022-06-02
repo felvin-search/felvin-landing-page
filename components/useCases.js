@@ -1,14 +1,9 @@
 import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/effect-coverflow";
-import "swiper/css/pagination";
-
-// import required modules
-import { EffectCoverflow, Pagination, Autoplay } from "swiper";
+import ReactPlayer from "react-player";
 import WishlistBar from "./Wishlist";
+import { Grid } from "@mui/material";
+import VideoPlayback from "./VideoPlayback";
 const UseCasesPageStyles = styled.div`
   background-color: #1a1a1a;
   min-height: 100vh;
@@ -172,12 +167,10 @@ const Pill = styled.div`
   border-radius: 50px;
   padding: 0.6rem 1.2rem;
   font-size: 0.8rem;
-  @media (max-width:480px){
-     font-size: 0.6rem;
+  @media (max-width: 480px) {
+    font-size: 0.6rem;
   }
-    
-  
-`
+`;
 
 const ExternalLinkPill = styled(Pill)`
   font-size: 0.7rem;
@@ -203,22 +196,11 @@ const UseCaseRow = styled(ExternalLinkArea)`
 
 const UseCasePill = styled(Pill)`
   background-color: #e8e8e8;
-  
+
   color: #232323;
 `;
-const Cards = styled.div`
-  // background: rgba(255, 255, 255, 0.1);
-  width: 100%;
-  overflow: hidden;
-  padding: 5rem;
-`;
-const Tagline = styled.h2`
-  font-size: 1rem;
-  max-width: 600px;
-  margin: 0;
-  color: lightgrey;
-  line-height: 1.5rem;
-`;
+
+
 //TODO: TO Make responsive silder
 export default function UseCasesPage() {
   return (
@@ -230,60 +212,29 @@ export default function UseCasesPage() {
       <MainUseCaseRow>
         {/* <MainUseCase>Books</MainUseCase> */}
         <MainUseCase highlighted>Instant Apps</MainUseCase>
-        <Tagline>
-          Instant apps are the small interactive cards which you get for your
-          search queries. We can build instant apps for all kinds of use cases
-          like dictionary, checking football scores, stock prices or notes from
-          your notion or even search history from company slack or anything!
-        </Tagline>
       </MainUseCaseRow>
       <CodeUseCaseExample>
-        <Swiper
-          effect={"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={1}
-          breakpoints={{
-            640: {
-              slidesPerView: 2,
-            },
+        {/* Examples */}
+        <VideoPlayback
+          headline="🚀 Add Addrenaline To Your Search Engine"
+          desc="72+ more handcrafted tools for your daily task and still counting more.Need any tools not present. Give the idea in our Discord community or can create it by yourself by forking on github.
+"
+          video="/demo.mp4"
+        />
+        <VideoPlayback
+          left="true"
+          headline="No Need to Change Your Fav Search Engine😄"
+          desc="It is available as a browser extension so no need to download any additional software, works with your fav browser, no need to switch your environment."
+          video="/demo.mp4"
+        />
+        <VideoPlayback
+          headline="Amazing Collections Of Dev Utilities 🔥
+"
+          video="/demo.mp4"
+          desc="We have a wide range of tools ranging from random password generator ,csv to json convertor,json to csv convertor ,cron parser  etc.
 
-            768: {
-              slidesPerView: 2,
-            },
-            1024: {
-              slidesPerView: 2,
-            },
-          }}
-          loop="true"
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          autoplay={{
-            delay: 2500,
-            disableOnInteraction: false,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination, Autoplay]}
-          className="mySwiper"
-        >
-          <SwiperSlide>
-            <img src="https://i.ibb.co/SQW6NP3/Screenshot-2022-05-02-at-2-32-42-AM.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://i.ibb.co/ssjk8S7/Screenshot-2022-05-02-at-12-22-16-PM.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://i.ibb.co/gJvXVLt/Screenshot-2022-05-02-at-2-33-00-AM.png" />
-          </SwiperSlide>
-          <SwiperSlide>
-            <img src="https://i.ibb.co/QYDK4NR/Screenshot-2022-05-02-at-2-33-20-AM.png" />
-          </SwiperSlide>
-        </Swiper>
+"
+        />
       </CodeUseCaseExample>
       <FancyTextArea>
         <FancyText1>more</FancyText1>
@@ -292,7 +243,7 @@ export default function UseCasesPage() {
       </FancyTextArea>
       <Subheading>See more potential use cases for Felvin</Subheading>
       <ExternalLinkArea>
-        <WishlistBar/>
+        <WishlistBar />
       </ExternalLinkArea>
       <UseCaseArea>
         <UseCaseRow>
