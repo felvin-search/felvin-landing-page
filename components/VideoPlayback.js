@@ -1,5 +1,15 @@
 import styled from "styled-components";
 import ReactPlayer from "react-player";
+import { useAnimation, motion } from "framer-motion";
+
+import { useRef } from "react";
+import useIntersection from "../helpers/observer";
+import { useEffect } from "react";
+
+const Variants = {
+  visible: { opacity: 1, transition: { duration: 1 } },
+  hidden: { opacity: 0 },
+};
 
 const VideoBg = styled.div`
   position: absolute;
@@ -14,24 +24,25 @@ const VideoBg = styled.div`
   border: 1px solid rgba(255, 255, 255, 0.3);
 `;
 const ReactPlayerStyle = styled(ReactPlayer)`
-  height: 100%;
-  width: 100%;
+ 
   z-index: 3;
   position: relative;
   max-width: 1153px;
   aspect-ratio: 2306 / 1372;
 `;
 
-const Container = styled.div`
+const Container = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   margin: 3rem 0;
   width: 95%;
   min-height: 25rem;
+  overflow: hidden;
 `;
 const Item1 = styled.div`
   position: relative;
-  /* background-color: red; */
+  height: 100%;
+  min-width: 45%;
   grid-column: ${(props) => (props.left ? "1/2" : "2/3")};
   grid-row-start: 1;
   display: flex;
@@ -47,7 +58,7 @@ const Item1 = styled.div`
 `;
 const Item2 = styled.div`
   position: relative;
-  /* background-color: blue; */
+  height: 100%;
   grid-column: ${(props) => (props.left ? "2/3" : "1/2")};
   grid-row-start: 1;
   @media (max-width: 600px) {
@@ -63,8 +74,21 @@ const BodyText = styled.p`
 `;
 
 const VideoPlayback = ({ headline, desc, left, video }) => {
+  const control = useAnimation();
+  const ref = useRef();
+  const inViewport = useIntersection(ref, "0px"); //
+  useEffect(() => {
+    if (inViewport) {
+      control.start("visible");
+    } else {
+      control.start("hidden");
+    }
+  }, [control, inViewport]);
+
+  //   const [ref, inView] = useInView();
+
   return (
-    <Container>
+    <Container ref={ref} variants={Variants} initial="hidden" animate={control}>
       <Item1 left={left}>
         <Heading>{headline}</Heading>
         <BodyText>{desc}</BodyText>
