@@ -23,17 +23,11 @@ const VideoBg = styled.div`
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.3);
 `;
-const ReactPlayerStyle = styled(ReactPlayer)`
- 
-  z-index: 3;
-  position: relative;
-  max-width: 1153px;
-  aspect-ratio: 2306 / 1372;
-`;
 
 const Container = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: auto;
   margin: 3rem 0;
   width: 95%;
   min-height: 25rem;
@@ -42,7 +36,6 @@ const Container = styled(motion.div)`
 const Item1 = styled.div`
   position: relative;
   height: 100%;
-  min-width: 45%;
   grid-column: ${(props) => (props.left ? "1/2" : "2/3")};
   grid-row-start: 1;
   display: flex;
@@ -95,13 +88,18 @@ const VideoPlayback = ({ headline, desc, left, video }) => {
       </Item1>
       <Item2 left={left}>
         <VideoBg />
-        <ReactPlayerStyle
+        
+        <ReactPlayer
           loop={true}
           muted={true}
           playing={true}
           url={video}
           width="100%"
           height="100%"
+          style={{
+             position: 'relative',
+             zIndex:5
+          }}
         />
       </Item2>
     </Container>
