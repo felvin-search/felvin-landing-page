@@ -28,7 +28,6 @@ const Cards = styled.div`
   min-height: 5rem;
   padding: 0.8em;
   border-radius: 10px;
-
   cursor: pointer;
 `;
 const Avatar = styled.div`
@@ -68,7 +67,7 @@ const TweetIcon = styled.div`
   justify-content: center;
   align-items: center;
 `;
-const TweetCard = () => (
+const TweetCard = ({ name, id, msg, dp }) => (
   <Cards>
     <TweetIcon>
       <Twitter color="white" size={15} />
@@ -79,18 +78,16 @@ const TweetCard = () => (
           width: "100%",
           height: "100%",
         }}
-        src="https://pbs.twimg.com/profile_images/1517869199804096515/cvb4Tllz_400x400.jpg"
+        src={dp}
       />
     </Avatar>
 
     <div style={{ width: "80%" }}>
       <Div>
-        <Name>Gyana Ranjan Panda</Name>
-        <Id>@gyanapanda</Id>
+        <Name>{name}</Name>
+        <Id>{id}</Id>
       </Div>
-      <Tweets>
-        I have used Felvin all my dev related work and i am loving it.
-      </Tweets>
+      <Tweets>{msg}</Tweets>
     </div>
   </Cards>
 );
@@ -132,32 +129,28 @@ const Testimonial = () => {
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <TweetCard />
+        <SwiperSlide key={1}>
+          <TweetCard
+            name="Sarthak Goel"
+            msg="I am a developer and I am delighted everytime I see the exact thing i am looking for right on top without me having to go through different links and look for expert opinion
+Great extension!"
+            dp="/assets/imgs/1.png"
+          />
         </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
+        <SwiperSlide key={2}>
+          <TweetCard
+            name="Harsh Gupta"
+            id="@hargup13"
+            msg="I have got all my missing dev utilities, right in my Google search! Amazing work 🎉"
+            dp="/assets/imgs/2.jpg"
+          />
         </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
-        </SwiperSlide>
-        <SwiperSlide>
-          <TweetCard />
+        <SwiperSlide key={3}>
+          <TweetCard
+            name="tanvi gupta"
+            msg="This is a pretty cool extension, I like the little code snippets and dev utilities it provides. Now I don't have to go random websites when I need to convert my data between different formats etc. It has a lot of nifty tools like pdf merge that are very handy."
+            dp="/assets/imgs/3.jpg"
+          />
         </SwiperSlide>
       </Swiper>
     </Container>
