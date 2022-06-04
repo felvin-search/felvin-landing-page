@@ -15,9 +15,9 @@ import { Autoplay, Pagination, Navigation } from "swiper";
 const Container = styled.div`
   min-height: 45vh;
   background: rgb(26, 26, 26);
-  animation: running normal 34.8s 0s linear infinite;
-  @keyframes running {
-  }
+  display: flex;
+  justify-content: center;
+  align-items: center;
 `;
 
 const Cards = styled.div`
@@ -28,9 +28,8 @@ const Cards = styled.div`
   min-height: 5rem;
   padding: 0.8em;
   border-radius: 10px;
- 
+
   cursor: pointer;
- 
 `;
 const Avatar = styled.div`
   width: 4rem;
@@ -105,6 +104,20 @@ const Testimonial = () => {
         slidesPerGroup={1}
         loop={true}
         loopFillGroupWithBlank={true}
+        breakpoints={{
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 4,
+            spaceBetween: 40,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 50,
+          },
+        }}
         speed={5000}
         autoplay={{
           delay: 1,
