@@ -6,7 +6,7 @@ const FooterStyles = styled.footer`
   position: relative;
   min-height: 50vh;
   padding-top: 4rem;
-  border-radius: 4rem 4rem 0 0;
+  /* border-radius: 4rem 4rem 0 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;

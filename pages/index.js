@@ -3,6 +3,7 @@ import Home from "../components/home";
 import FeaturesPage from "../components/featuresPage";
 import UseCasesPage from "../components/useCases";
 import Footer from "../components/footer";
+import Testimonial from "../components/testimonials";
 
 const Title = styled.h1`
   font-size: 50px;
@@ -25,7 +26,8 @@ export default function App() {
     <div>
       <Home />
       <UseCasesPage />
-      <FeaturesPage />
+      {/* <FeaturesPage /> */}
+      <Testimonial/>
       <Footer />
     </div>
   );

@@ -32,6 +32,9 @@ const Container = styled(motion.div)`
   width: 95%;
   min-height: 25rem;
   overflow: hidden;
+  @media (max-width:450px){
+    width: 100%;
+  }
 `;
 const Item1 = styled.div`
   position: relative;

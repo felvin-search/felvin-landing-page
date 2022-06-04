@@ -111,6 +111,7 @@ const CodeUseCaseExample = styled.div`
 const FancyTextArea = styled.div`
   height: 40vh;
   position: relative;
+  
 `;
 
 const FancyText = styled.div`
@@ -228,12 +229,9 @@ export default function UseCasesPage() {
           video="/demo.mp4"
         />
         <VideoPlayback
-          headline="Amazing Collections Of Dev Utilities 🔥
-"
+          headline="Get the exact library you want 🔥"
           video="/demo.mp4"
-          desc="We have a wide range of tools ranging from random password generator ,csv to json convertor,json to csv convertor ,cron parser  etc.
-
-"
+          desc="Never waste time finding libraries again."
         />
       </CodeUseCaseExample>
       <FancyTextArea>
