@@ -111,7 +111,6 @@ const CodeUseCaseExample = styled.div`
 const FancyTextArea = styled.div`
   height: 40vh;
   position: relative;
-  
 `;
 
 const FancyText = styled.div`
@@ -201,7 +200,6 @@ const UseCasePill = styled(Pill)`
   color: #232323;
 `;
 
-
 //TODO: TO Make responsive silder
 export default function UseCasesPage() {
   return (
@@ -220,7 +218,7 @@ export default function UseCasesPage() {
           headline="🚀 Add Addrenaline To Your Search Engine"
           desc="72+ more handcrafted tools for your daily task and still counting more.Need any tools not present. Give the idea in our Discord community or can create it by yourself by forking on github.
 "
-          video="/demo.mp4"
+          video="/usecase1.mp4"
         />
         <VideoPlayback
           left="true"
@@ -230,7 +228,7 @@ export default function UseCasesPage() {
         />
         <VideoPlayback
           headline="Get the exact library you want 🔥"
-          video="/demo.mp4"
+          video="/demo3.mp4"
           desc="Never waste time finding libraries again."
         />
       </CodeUseCaseExample>
