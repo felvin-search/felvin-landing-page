@@ -134,6 +134,7 @@ const Testimonial = () => {
             name="Sarthak Goel"
             msg="I am a developer and I am delighted everytime I see the exact thing i am looking for right on top without me having to go through different links and look for expert opinion
 Great extension!"
+            id={"@sarthakgoel"}
             dp="/assets/imgs/1.png"
           />
         </SwiperSlide>
@@ -148,6 +149,7 @@ Great extension!"
         <SwiperSlide key={3}>
           <TweetCard
             name="tanvi gupta"
+            id={"@tanvigupta"}
             msg="This is a pretty cool extension, I like the little code snippets and dev utilities it provides. Now I don't have to go random websites when I need to convert my data between different formats etc. It has a lot of nifty tools like pdf merge that are very handy."
             dp="/assets/imgs/3.jpg"
           />
