@@ -5,6 +5,7 @@ import ReactPlayer from "react-player";
 import { Grid } from "@mui/material";
 import { motion } from "framer-motion";
 import DoneIcon from "@mui/icons-material/Done";
+
 const HomeStyle = styled.div`
   min-height: 100vh;
   background: radial-gradient(
@@ -100,7 +101,18 @@ export default function Home() {
       <Header />
       <HeroStyle>
         <Grid sx={{ width: "90%" }} container>
-          <Grid item xs={12} sm={6}>
+          <Grid
+            component={motion.div}
+            initial={{ opacity: 0, x: "-100vw" }}
+            animate={{
+              opacity: 1,
+              x: 0,
+              transition: { duration: 1.05 },
+            }}
+            item
+            xs={12}
+            sm={6}
+          >
             <HeroText>
               <HeroTextTransparent>The</HeroTextTransparent>
               <HeroTextTransparent>Ultimate</HeroTextTransparent>
@@ -122,7 +134,15 @@ export default function Home() {
             </HeroText>
             <WishlistBar />
           </Grid>
-          <Grid item xs={12} sm={6} sx={{ position: "relative",mt:2 }}>
+          <Grid
+            item
+            component={motion.div}
+            initial={{ opacity: 0, x: "100vw" }}
+            animate={{ opacity: 1, x: 0, transition: { duration: 1.05 } }}
+            xs={12}
+            sm={6}
+            sx={{ position: "relative", mt: 2 }}
+          >
             <VideoBg />
             <ReactPlayerStyle
               loop={true}

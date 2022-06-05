@@ -237,32 +237,7 @@ export default function UseCasesPage() {
         <FancyText2>more</FancyText2>
         <FancyText3>more</FancyText3>
       </FancyTextArea>
-      <Subheading>See more potential use cases for Felvin</Subheading>
-      <ExternalLinkArea>
-        <WishlistBar />
-      </ExternalLinkArea>
-      <UseCaseArea>
-        <UseCaseRow>
-          <UseCasePill>Code Snippets</UseCasePill>
-          <UseCasePill>Regex Validator</UseCasePill>
-          <UseCasePill>Latex Render</UseCasePill>
-        </UseCaseRow>
-        <UseCaseRow>
-          <UseCasePill>HTTP Status codes</UseCasePill>
-          <UseCasePill>CSV to JSON</UseCasePill>
-          <UseCasePill>Markdown to HTML</UseCasePill>
-        </UseCaseRow>
-        <UseCaseRow>
-          <UseCasePill>Train timing finder</UseCasePill>
-          <UseCasePill>Search tweets of people you follow</UseCasePill>
-          <UseCasePill>Logo finder</UseCasePill>
-        </UseCaseRow>
-        <UseCaseRow>
-          <UseCasePill>Royalty free Music finder</UseCasePill>
-          <UseCasePill>Book finder</UseCasePill>
-          <UseCasePill>PDF merger</UseCasePill>
-        </UseCaseRow>
-      </UseCaseArea>
+      <Subheading>See What People Say About Us!</Subheading>
     </UseCasesPageStyles>
   );
 }
