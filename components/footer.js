@@ -190,7 +190,7 @@ const AnchorLinks = () => {
 export default function Footer() {
   return (
     <FooterStyles>
-      <MainText>start building with felvin</MainText>
+      <MainText>Be one of the first to get early access to Felvin</MainText>
       <PillArea>
         <WishlistBar />
 

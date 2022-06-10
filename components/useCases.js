@@ -232,11 +232,11 @@ export default function UseCasesPage() {
           desc="Never waste time finding libraries again."
         />
       </CodeUseCaseExample>
-      <FancyTextArea>
+      {/* <FancyTextArea>
         <FancyText1>more</FancyText1>
         <FancyText2>more</FancyText2>
         <FancyText3>more</FancyText3>
-      </FancyTextArea>
+      </FancyTextArea> */}
       <Subheading>See What People Say About Us!</Subheading>
     </UseCasesPageStyles>
   );
