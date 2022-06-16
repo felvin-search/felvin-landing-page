@@ -138,20 +138,21 @@ Great extension!"
             dp="/assets/imgs/1.png"
           />
         </SwiperSlide>
-        <SwiperSlide key={2}>
-          <TweetCard
-            name="Harsh Gupta"
-            id="@hargup13"
-            msg="I have got all my missing dev utilities, right in my Google search! Amazing work 🎉"
-            dp="/assets/imgs/2.jpg"
-          />
-        </SwiperSlide>
+       
         <SwiperSlide key={3}>
           <TweetCard
             name="tanvi gupta"
             id={"@tanvigupta"}
             msg="This is a pretty cool extension, I like the little code snippets and dev utilities it provides. Now I don't have to go random websites when I need to convert my data between different formats etc. It has a lot of nifty tools like pdf merge that are very handy."
             dp="/assets/imgs/3.jpg"
+          />
+        </SwiperSlide>
+        <SwiperSlide key={4}>
+          <TweetCard
+            name="Gyana Ranjan Panda"
+            id={"@traveling_monk3"}
+            msg="Did all my dev related needs on the search bar itself.Cool!"
+            dp="/assets/imgs/4.jpg"
           />
         </SwiperSlide>
       </Swiper>

@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import WishlistBar from "./Wishlist";
+import { Grid } from "@mui/material";
 
 const FooterStyles = styled.footer`
   position: relative;
@@ -31,7 +32,7 @@ const LinkExternal = styled.a`
 `;
 
 const MainText = styled.p`
-  font-size: 2.2rem;
+  font-size: 2rem;
   text-align: center;
 `;
 
@@ -113,6 +114,13 @@ const LinkArea = styled.div`
     padding: 1rem;
   }
 `;
+const Container = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  width: 100%;
+  z-index: 2;
+  margin-top: 1rem;
+`;
 
 const LogoIcon = styled.svg`
   height: 30px;
@@ -190,7 +198,7 @@ const AnchorLinks = () => {
 export default function Footer() {
   return (
     <FooterStyles>
-      <MainText>Be one of the first to get early access to Felvin</MainText>
+      <MainText>Book Your Supercharger</MainText>
       <PillArea>
         <WishlistBar />
 
@@ -202,11 +210,14 @@ export default function Footer() {
         </LinkExternal> */}
       </PillArea>
       <FancyText />
-      <LinkArea>
+      <Container>
         <LogoComp />
+
         <AnchorLinks />
+
         <SocialMediaIcons />
-      </LinkArea>
+      </Container>
+
       <CopyRight>© 2022 WOW21, Inc. dba Felvin</CopyRight>
     </FooterStyles>
   );

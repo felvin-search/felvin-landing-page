@@ -124,12 +124,12 @@ export default function Home() {
 
               <Tagline>
                 <DoneIcon />
-                Available as browser extension
+                All in One Extension
               </Tagline>
 
               <Tagline>
                 <DoneIcon />
-                All in One browser extension
+                Available For Chrome and Firefox
               </Tagline>
             </HeroText>
             <WishlistBar />
