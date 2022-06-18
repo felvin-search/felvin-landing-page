@@ -228,7 +228,7 @@ export default function UseCasesPage() {
         />
         <VideoPlayback
           headline="Get the exact library you want 🔥"
-          video="/demo3.mp4"
+          video="/v3.mp4"
           desc="Never waste time finding libraries again."
         />
       </CodeUseCaseExample>

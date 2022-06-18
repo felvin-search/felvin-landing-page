@@ -151,8 +151,7 @@ const SlightlySpacedRow = styled(CloseRow)`
 `;
 const CopyRight = styled.h6`
   color: #000;
-  margin-right: auto;
-  margin-left: 2rem;
+  text-align: center;
   z-index: 2;
 `;
 

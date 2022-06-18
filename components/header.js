@@ -6,10 +6,11 @@ const HeaderStyle = styled.div`
   /* height: 140px; */
   display: flex;
   flex-direction: row;
+ 
+ 
 `;
 const LinkExternal = styled.a`
   text-decoration: none;
- 
 `;
 
 const Icon = styled.svg`
@@ -40,7 +41,6 @@ const CompStyle = styled.div`
   flex-direction: row;
   align-items: center;
   margin-right: 1rem;
-  
 `;
 // ================= Comp 1 =====================
 
@@ -72,10 +72,8 @@ const Comp1 = () => {
 const Comp2 = () => {
   return (
     <CompStyle>
-     
       <Icon as={Icons.Discord} />
       <HeaderText>Discord</HeaderText>
-      
     </CompStyle>
   );
 };
@@ -106,7 +104,7 @@ const BetaButtonStyle = styled.div`
     padding: 0.5rem;
   }
 `;
-const Comp4 = ({text}) => {
+const Comp4 = ({ text }) => {
   return <BetaButtonStyle>{text}</BetaButtonStyle>;
 };
 export { Comp4 };
@@ -131,16 +129,7 @@ export default function Header() {
         <Comp1 />
       </LeftSection>
       <RightSection>
-        
-          {/* <Comp2 /> */}
-          <SocialMediaIcons/>
-       
-        {/* <LinkExternal href="https://github.com/felvin-search">
-          <Comp3 />
-        </LinkExternal> */}
-        {/* <LinkExternal href="https://felvin.com/">
-        <Comp4 />
-        </LinkExternal> */}
+        <SocialMediaIcons />
       </RightSection>
     </HeaderStyle>
   );
