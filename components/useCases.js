@@ -218,7 +218,7 @@ export default function UseCasesPage() {
           headline="🚀 Supercharge Your Search Engine"
           desc="72+ more handcrafted tools for your daily task and still counting more.Need any tools not present. Give the idea in our Discord community or can create it by yourself by forking on github.
 "
-          video="/usecase1.mp4"
+          video="/v1.mp4"
         />
         <VideoPlayback
           left="true"
