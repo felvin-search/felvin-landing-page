@@ -124,12 +124,12 @@ export default function Home() {
 
               <Tagline>
                 <DoneIcon />
-                All in One Extension
+                All in One Extension (Chrome, Firefox)
               </Tagline>
 
               <Tagline>
                 <DoneIcon />
-                Available For Chrome and Firefox
+                Source code available on GitHub
               </Tagline>
             </HeroText>
             <WishlistBar />
@@ -148,7 +148,7 @@ export default function Home() {
               loop={true}
               muted={true}
               playing={true}
-              url="/demo.mp4"
+              url="/hero_video.mp4"
               width="100%"
               height="100%"
             />

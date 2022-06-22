@@ -224,11 +224,11 @@ export default function UseCasesPage() {
           left="true"
           headline="No Need to Change Your Fav Search Engine😄"
           desc="It is available as a browser extension so no need to download any additional software, works with your fav browser, no need to switch your environment."
-          video="/demo.mp4"
+          video="/v2.mp4"
         />
         <VideoPlayback
           headline="Get the exact library you want 🔥"
-          video="/v3.mp4"
+          video="/v3_1.mp4"
           desc="Never waste time finding libraries again."
         />
       </CodeUseCaseExample>
