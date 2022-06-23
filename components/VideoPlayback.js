@@ -18,7 +18,7 @@ const VideoBg = styled.div`
   z-index: 1;
   background: rgba(255, 255, 255, 0.1);
   /* box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37); */
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px); 
   -webkit-backdrop-filter: blur(4px);
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.3);
@@ -32,7 +32,7 @@ const Container = styled(motion.div)`
   width: 95%;
   min-height: 25rem;
   overflow: hidden;
-  @media (max-width:450px){
+  @media (max-width: 450px) {
     width: 100%;
   }
 `;
@@ -91,7 +91,7 @@ const VideoPlayback = ({ headline, desc, left, video }) => {
       </Item1>
       <Item2 left={left}>
         <VideoBg />
-        
+
         <ReactPlayer
           loop={true}
           muted={true}
@@ -100,8 +100,8 @@ const VideoPlayback = ({ headline, desc, left, video }) => {
           width="100%"
           height="100%"
           style={{
-             position: 'relative',
-             zIndex:5
+            position: "relative",
+            zIndex: 5,
           }}
         />
       </Item2>
