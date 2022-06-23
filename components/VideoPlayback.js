@@ -27,10 +27,11 @@ const VideoBg = styled.div`
 const Container = styled(motion.div)`
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: auto;
+  /* grid-template-rows: auto; */
   margin: 3rem 0;
   width: 95%;
-  min-height: 25rem;
+
+  height: 25rem;
   overflow: hidden;
   @media (max-width: 450px) {
     width: 100%;
