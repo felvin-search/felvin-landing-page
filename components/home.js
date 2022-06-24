@@ -21,8 +21,10 @@ const HeroStyle = styled.div`
   z-index: 10;
   overflow: hidden;
   display: flex;
-  margin-top: 5rem;
-  @media (max-width: 650px) {
+  height: 80vh;
+  // margin-top: 5rem;
+  // border: ${(props) => (props.body ? `1px solid #fff` : `1px solid #000`)};
+  /* @media (max-width: 650px) {
     margin-top: 3rem;
   }
   @media (max-width: 450px) {
@@ -30,11 +32,12 @@ const HeroStyle = styled.div`
   }
   @media (max-width: 350px) {
     margin-top: 0.5rem;
-  }
+  } */
   justify-content: center;
   align-items: center;
 `;
 
+const HeroContainer = styled.div``;
 const HeroText = styled.div`
   font-size: 3rem;
   color: #232323;
@@ -52,7 +55,7 @@ const HeroText = styled.div`
   }
 `;
 
-const HeroTextSolid = styled.h1`
+const HeroTextSolid = styled.h2`
   -webkit-text-stroke: 1px #232323;
   margin: 0rem;
 `;
@@ -73,14 +76,17 @@ const ReactPlayerStyle = styled(ReactPlayer)`
   max-width: 1153px;
   aspect-ratio: 2306 / 1372;
 `;
-const Tagline = styled.h2`
+const Tagline = styled.h6`
   font-size: 1rem;
-  max-width: 300px;
+  width: 100%;
   margin: 0;
   color: #232323;
   line-height: 1.5rem;
   display: flex;
   align-items: center;
+  @media (max-width: 450px) {
+    font-size: 0.85rem;
+  }
 `;
 const VideoBg = styled.div`
   position: absolute;
@@ -99,7 +105,7 @@ export default function Home() {
   return (
     <HomeStyle>
       <Header />
-      <HeroStyle>
+      <HeroStyle body>
         <Grid sx={{ width: "90%" }} container>
           <Grid
             component={motion.div}
@@ -116,20 +122,25 @@ export default function Home() {
             <HeroText>
               <HeroTextTransparent>The</HeroTextTransparent>
               <HeroTextTransparent>Ultimate</HeroTextTransparent>
-              <HeroTextSolid>Dev Utility</HeroTextSolid>
+              <HeroTextSolid>Search Extension</HeroTextSolid>
+
               <Tagline>
                 <DoneIcon />
-                72+ carefully crafted developer tools
+                Finds exactly what you are looking for
               </Tagline>
 
               <Tagline>
                 <DoneIcon />
-                All in One Extension (Chrome, Firefox)
+                Serves content right on the search page
               </Tagline>
 
               <Tagline>
                 <DoneIcon />
-                Source code available on GitHub
+                No unnecessary links
+              </Tagline>
+              <Tagline>
+                <DoneIcon />
+                Great listeners - Request what you would like us to build
               </Tagline>
             </HeroText>
             <WishlistBar />

@@ -215,21 +215,22 @@ export default function UseCasesPage() {
       <CodeUseCaseExample>
         {/* Examples */}
         <VideoPlayback
-          headline="🚀 Supercharge Your Search Engine"
-          desc="72+ more handcrafted tools for your daily task and still counting more.Need any tools not present. Give the idea in our Discord community or can create it by yourself by forking on github.
-"
+          headline="🚀 Supercharge Your Search Experience"
+          desc="We build easy to use interfaces that can fit perfectly into your daily Google/Bing searches."
           video="/v1.mp4"
         />
         <VideoPlayback
           left="true"
-          headline="No Need to Change Your Fav Search Engine😄"
-          desc="It is available as a browser extension so no need to download any additional software, works with your fav browser, no need to switch your environment."
+          headline="Without changing your Search Behavior 😄"
+          desc="Felvin is a browser extension. So, we do the hard work quietly in the background. No additional software, no new browser and no new websites.
+          "
           video="/v2.mp4"
         />
         <VideoPlayback
-          headline="Get the exact library you want 🔥"
+          headline="Just focus on what you love 🔥
+          "
           video="/v3_1.mp4"
-          desc="Never waste time finding libraries again."
+          desc=" Never waste time finding libraries, searching algorithms or browsing through tons of links. Let Felvin do it for you for free - just tell us what you want and how you want it right there."
         />
       </CodeUseCaseExample>
       {/* <FancyTextArea>
