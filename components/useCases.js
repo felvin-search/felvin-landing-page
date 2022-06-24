@@ -1,8 +1,4 @@
 import styled from "styled-components";
-import { Swiper, SwiperSlide } from "swiper/react";
-import ReactPlayer from "react-player";
-import WishlistBar from "./Wishlist";
-import { Grid } from "@mui/material";
 import VideoPlayback from "./VideoPlayback";
 const UseCasesPageStyles = styled.div`
   background-color: #1a1a1a;
@@ -53,15 +49,6 @@ const UseCasesPageStyles = styled.div`
     }
   }
 `;
-const LinkExternal = styled.a`
-  text-decoration: none;
-  cursor: pointer;
-  color: white;
-  display: flex;
-  align-items: center;
-  gap: 0.3rem;
-`;
-
 const Heading = styled.h2`
   display: flex;
   flex-direction: column;
@@ -107,36 +94,6 @@ const CodeUseCaseExample = styled.div`
   z-index: 1;
   font-family: "F37 Jan Regular";
 `;
-
-const FancyTextArea = styled.div`
-  height: 40vh;
-  position: relative;
-`;
-
-const FancyText = styled.div`
-  position: absolute;
-  transform: translateX(-50%);
-  background: radial-gradient(#ffd542, #1a1a1a 70%);
-  -webkit-text-stroke: 1px transparent;
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: #1a1a1a;
-  font-size: 10rem;
-  height: 10rem;
-`;
-
-const FancyText1 = styled(FancyText)`
-  top: 40%;
-`;
-
-const FancyText2 = styled(FancyText)`
-  top: 50%;
-`;
-
-const FancyText3 = styled(FancyText)`
-  top: 60%;
-`;
-
 const Subheading = styled.h3`
   color: #d9d9d9;
   font-size: 2.5rem;
@@ -153,15 +110,7 @@ const ExternalLinkArea = styled.div`
   margin: 0.5rem;
 `;
 
-const UseCaseArea = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem;
-  margin-bottom: 3rem;
-  gap: 0.8rem;
-`;
+
 
 const Pill = styled.div`
   border-radius: 50px;
@@ -172,16 +121,7 @@ const Pill = styled.div`
   }
 `;
 
-const ExternalLinkPill = styled(Pill)`
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  border: 1px solid #fc4b6b;
-  color: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-`;
+
 
 const MainUseCaseRow = styled(ExternalLinkArea)`
   gap: 3rem;
@@ -189,16 +129,7 @@ const MainUseCaseRow = styled(ExternalLinkArea)`
   align-items: center;
 `;
 
-const UseCaseRow = styled(ExternalLinkArea)`
-  gap: 1rem;
-  margin: 0;
-`;
 
-const UseCasePill = styled(Pill)`
-  background-color: #e8e8e8;
-
-  color: #232323;
-`;
 
 //TODO: TO Make responsive silder
 export default function UseCasesPage() {
@@ -206,10 +137,10 @@ export default function UseCasesPage() {
     <UseCasesPageStyles>
       <Heading>
         <HeadingLine1>See Felvin in Action</HeadingLine1>
-        {/* <HeadingLine>magic together</HeadingLine> */}
+      
       </Heading>
       <MainUseCaseRow>
-        {/* <MainUseCase>Books</MainUseCase> */}
+
         <MainUseCase highlighted>Instant Apps</MainUseCase>
       </MainUseCaseRow>
       <CodeUseCaseExample>
@@ -233,11 +164,6 @@ export default function UseCasesPage() {
           desc=" Never waste time finding libraries, searching algorithms or browsing through tons of links. Let Felvin do it for you for free - just tell us what you want and how you want it right there."
         />
       </CodeUseCaseExample>
-      {/* <FancyTextArea>
-        <FancyText1>more</FancyText1>
-        <FancyText2>more</FancyText2>
-        <FancyText3>more</FancyText3>
-      </FancyTextArea> */}
       <Subheading>See What People Say About Us!</Subheading>
     </UseCasesPageStyles>
   );

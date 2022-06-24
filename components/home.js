@@ -22,22 +22,10 @@ const HeroStyle = styled.div`
   overflow: hidden;
   display: flex;
   height: 80vh;
-  // margin-top: 5rem;
-  // border: ${(props) => (props.body ? `1px solid #fff` : `1px solid #000`)};
-  /* @media (max-width: 650px) {
-    margin-top: 3rem;
-  }
-  @media (max-width: 450px) {
-    margin-top: 2rem;
-  }
-  @media (max-width: 350px) {
-    margin-top: 0.5rem;
-  } */
   justify-content: center;
   align-items: center;
 `;
 
-const HeroContainer = styled.div``;
 const HeroText = styled.div`
   font-size: 3rem;
   color: #232323;

@@ -1,13 +1,11 @@
 import styled from "styled-components";
 import Logo from "./Logo";
 import WishlistBar from "./Wishlist";
-import { Grid } from "@mui/material";
 
 const FooterStyles = styled.footer`
   position: relative;
   min-height: 50vh;
   padding-top: 4rem;
-  /* border-radius: 4rem 4rem 0 0; */
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -200,13 +198,6 @@ export default function Footer() {
       <MainText>Book Your Supercharger</MainText>
       <PillArea>
         <WishlistBar />
-
-        {/* <LinkExternal href="https://github.com/felvin-search">
-          <Pill>Fork on Git</Pill>
-        </LinkExternal> */}
-        {/* <LinkExternal href="https://discord.gg/FNMUavyu">
-          <Pill>Submit Ideas</Pill>
-        </LinkExternal> */}
       </PillArea>
       <FancyText />
       <Container>
