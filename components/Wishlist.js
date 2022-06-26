@@ -13,11 +13,13 @@ const SearchForm = styled.form`
   border-radius: 3rem;
   height: 3.8rem;
   width: clamp(20rem, 40vw, 35rem);
-  @media (max-width: 600px) {
-    width:100%;
-  }
   overflow: hidden;
   background: white;
+  @media (max-width: 600px) {
+    width:100%;
+    height: 3.3rem;
+  }
+ 
 `;
 
 const Input = styled(motion.input)`
