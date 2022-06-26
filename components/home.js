@@ -25,7 +25,7 @@ const HeroStyle = styled.div`
   justify-content: center;
   align-items: center;
   @media (max-width: 450px) {
-    margin-top: -2.4rem;
+    margin-top: -1rem;
   }
 `;
 
