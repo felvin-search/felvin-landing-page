@@ -110,8 +110,6 @@ const ExternalLinkArea = styled.div`
   margin: 0.5rem;
 `;
 
-
-
 const Pill = styled.div`
   border-radius: 50px;
   padding: 0.6rem 1.2rem;
@@ -121,15 +119,11 @@ const Pill = styled.div`
   }
 `;
 
-
-
 const MainUseCaseRow = styled(ExternalLinkArea)`
   gap: 3rem;
   flex-direction: column;
   align-items: center;
 `;
-
-
 
 //TODO: TO Make responsive silder
 export default function UseCasesPage() {
@@ -137,12 +131,11 @@ export default function UseCasesPage() {
     <UseCasesPageStyles>
       <Heading>
         <HeadingLine1>See Felvin in Action</HeadingLine1>
-      
       </Heading>
-      <MainUseCaseRow>
+      {/* <MainUseCaseRow>
 
         <MainUseCase highlighted>Instant Apps</MainUseCase>
-      </MainUseCaseRow>
+      </MainUseCaseRow> */}
       <CodeUseCaseExample>
         {/* Examples */}
         <VideoPlayback
