@@ -24,6 +24,9 @@ const HeroStyle = styled.div`
   height: 80vh;
   justify-content: center;
   align-items: center;
+  @media (max-width: 450px) {
+    margin-top: -2.4rem;
+  }
 `;
 
 const HeroText = styled.div`
