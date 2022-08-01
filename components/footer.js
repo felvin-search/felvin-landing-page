@@ -118,6 +118,9 @@ const Container = styled.div`
   width: 100%;
   z-index: 2;
   margin-top: 1rem;
+  @media (min-width: 450px) {
+    margin-top: 3rem;
+  }
 `;
 
 const LogoIcon = styled.svg`
@@ -149,6 +152,9 @@ const SlightlySpacedRow = styled(CloseRow)`
 `;
 const CopyRight = styled.h6`
   color: #000;
+  position: absolute;
+  left: 1rem;
+  bottom: 0;
   text-align: center;
   z-index: 2;
 `;
@@ -165,13 +171,16 @@ const LogoComp = () => {
 const SocialMediaIcons = () => {
   return (
     <SlightlySpacedRow>
-      <LinkExternal href="https://discord.gg/RUVHg7A9pQ">
+      <LinkExternal href="https://discord.gg/RUVHg7A9pQ" target="_blank">
         <img src="/discord.svg" />
       </LinkExternal>
-      <LinkExternal href="https://twitter.com/FelvinSearch?s=20&t=s88TcfTfEDP8czq8RdUjPQ">
+      <LinkExternal
+        href="https://twitter.com/FelvinSearch?s=20&t=s88TcfTfEDP8czq8RdUjPQ"
+        target="_blank"
+      >
         <img src="/twitter.svg" />
       </LinkExternal>
-      <LinkExternal href="https://github.com/felvin-search">
+      <LinkExternal href="https://github.com/felvin-search" target="_blank">
         <img src="/github.svg" />
       </LinkExternal>
     </SlightlySpacedRow>
@@ -181,10 +190,16 @@ export { SocialMediaIcons };
 const AnchorLinks = () => {
   return (
     <SlightlySpacedRow>
-      <LinkExternal href="https://www.linkedin.com/company/felvin-search">
+      <LinkExternal
+        href="https://www.linkedin.com/company/felvin-search"
+        target="_blank"
+      >
         ABOUT
       </LinkExternal>
-      <LinkExternal href="https://www.linkedin.com/company/felvin-search">
+      <LinkExternal
+        href="https://www.linkedin.com/company/felvin-search"
+        target="_blank"
+      >
         TEAM
       </LinkExternal>
       <LinkExternal href="mailto:team@felvin.com">CONTACT</LinkExternal>

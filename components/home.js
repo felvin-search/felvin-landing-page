@@ -113,7 +113,7 @@ export default function Home() {
             <HeroText>
               <HeroTextTransparent>The</HeroTextTransparent>
               <HeroTextTransparent>Ultimate</HeroTextTransparent>
-              <HeroTextSolid>Search Extension</HeroTextSolid>
+              <HeroTextSolid>Search Experience</HeroTextSolid>
 
               <Tagline>
                 <DoneIcon />

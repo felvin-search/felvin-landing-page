@@ -19,12 +19,11 @@ export default function App() {
         />
         <meta
           name="keywords"
-          content="Search, Utilities, Development, Experiences,Google, Extension"
+          content="Search,Felvin,Felvin Search, Utilities, Development, Experiences,Google, Extension"
         />
         <meta name="robots" content="index, follow" />
-        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta httpEquiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="language" content="English" />
-
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>
       <Home />

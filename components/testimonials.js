@@ -1,4 +1,3 @@
-import { Badge } from "@mui/material";
 import styled from "styled-components";
 import { Twitter } from "react-feather";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -28,6 +27,7 @@ const Cards = styled.div`
   min-height: 5rem;
   padding: 0.8em;
   border-radius: 10px;
+
   cursor: pointer;
 `;
 const Avatar = styled.div`
@@ -122,10 +122,6 @@ const Testimonial = () => {
           delay: 1,
           disableOnInteraction: false,
         }}
-        // pagination={{
-        //   clickable: true,
-        // }}
-        // navigation={true}
         modules={[Autoplay, Pagination, Navigation]}
         className="mySwiper"
       >
@@ -138,7 +134,7 @@ Great extension!"
             dp="/assets/imgs/1.png"
           />
         </SwiperSlide>
-       
+
         <SwiperSlide key={3}>
           <TweetCard
             name="tanvi gupta"
