@@ -24,9 +24,6 @@ export default function App() {
   return (
     <div>
       <Home />
-      <UseCasesPage />
-      <FeaturesPage />
-      <Footer />
     </div>
   );
 }
