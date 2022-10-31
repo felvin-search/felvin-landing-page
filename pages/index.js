@@ -1,8 +1,5 @@
 import styled from "styled-components";
 import Home from "../components/home";
-import FeaturesPage from "../components/featuresPage";
-import UseCasesPage from "../components/useCases";
-import Footer from "../components/footer";
 
 const Title = styled.h1`
   font-size: 50px;
