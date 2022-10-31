@@ -1,6 +1,5 @@
 import styled from "styled-components";
 import Logo from "./Logo";
-import Header from "./header";
 import HeroArea from "./heroArea";
 import WishlistBar from "./Wishlist";
 
@@ -174,7 +173,6 @@ const Image = styled.img`
 export default function Home() {
   return (
     <HomeStyle>
-      <Header />
       <HeroStyle>
         {!isMobile() ? (
           <Iframe
@@ -189,9 +187,8 @@ export default function Home() {
         )}
 
         <HeroText>
-          <HeroTextTransparent>Search Engine</HeroTextTransparent>
-          <HeroTextTransparent>For</HeroTextTransparent>
-          <HeroTextSolid>Engineers</HeroTextSolid>
+          <HeroTextTransparent>Building something new.</HeroTextTransparent>
+          <Tagline>Enter your email to get early access</Tagline>
         </HeroText>
         <WishlistBar />
       </HeroStyle>
